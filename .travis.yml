@@ -43,6 +43,4 @@ branches:
 env:
     global:
         # Github Pages
-        - GH_REF: github.com/xxxr/xxx.github.io.git
-        # Coding Pages
-        - CD_REF: git.coding.net/xxxr/xxx.git
+        - GH_REF: https://github.com/GaisaiYuno/gaisaiyuno.github.io
