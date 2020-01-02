@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="referrer" content="no-referrer" />
+	<meta http-equiv="keywords" content="BadApple,Bad Apple">
+	<meta http-equiv="description" content="JavaScript BadApple,JavaScript Bad Apple">
+    <link rel="bookmark" type="image/x-icon" href="images/favicon.ico" /> 
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" /> 
+    <title>Bad Apple</title>
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0 auto;
+                background: #000;
+            }
+            #stage {
+                margin: 16px auto;
+                width: 640px;
+            }
+            header a {
+                color: #7f7f7f;
+            }
+            #progress {
+                color: #7fb77f;
+            }
+            #div_loading {
+                width: 86%;
+                margin: 0 auto;
+                text-align: center;
+                height: 480px;
+                position: relative;
+            }
+            #div_loading img {
+                overflow: auto;
+                margin: auto;
+                position: absolute;
+                top: 0; 
+                left: 0; 
+                bottom: 0; 
+                right: 0;
+                vertical-align: middle;
+            }
+        </style>
+        <script src="js/jquery-min.js" type="text/javascript"></script>
+        <script src="js/badapple.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <a href="/">主页</a>
+            <a href="http://chyxion.github.io/">原作者</a>
+            <span id="progress">Loading Data:0&#37;</span>
+        </header>
+        <div id="div_loading">
+            <img src="images/loading.gif" />
+        </div>
+        <center>
+            <canvas id="stage">Sorry, Your Browser Does Not Support.</canvas>
+        </center>
+        
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+        <div id="aplayer"></div>
+        <script type="text/javascript" src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+		<script type="text/javascript" src="/dist/badapple.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150421519-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-150421519-2');
+		</script>
+    </body>
+</html>

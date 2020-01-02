@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer">
+  <meta name="google-site-verification" content="d9AYrxkYK5UHR01Tg1YU-rFek8B4Iv8QJ-2l0wKP9NE">
+  <link rel="shortcut icon" href="https://stevenmhy.tk/images/head.ico">
+
+  
+  <title>Archives: 2019 | StevenMengのBlog</title>
+  
+  <meta name="keywords" content="C++,算法,洛谷,Codeforces">
+  
+  
+  <meta name="description" content="OI竞赛">
+  
+
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.1/css/all.min.css">
+  
+
+  
+
+  
+    <link rel="stylesheet" href="/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  <!-- <script src="https://v1.hitokoto.cn/?c=a&encode=js&select=%23hitokoto" defer></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+  <script type="text/javascript" src="/js/global-hot-data.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+  
+  <script>
+    fetch('https://v1.hitokoto.cn/?c=a')
+      .then(function (res){
+        return res.json();
+      })
+      .then(function (data) {
+        var h_content = document.getElementById('hitokoto-content');
+        var h_from = document.getElementById('hitokoto-from');
+        h_content.innerText = data.hitokoto; 
+        h_from.innerText = "——" + data.from; 
+      })
+      .catch(function (err) {
+        console.error(err);
+      })
+  </script>
+
+
+  
+  
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bb4a6a9e11870ce79bc7865166cc8b34";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>    
+</head>
+<body>
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover  half'>
+      
+        
+  <h1 class='title'>Steven_MengのBlog</h1>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="" />
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class='menu navgation'>
+  <ul class='h-list'>
+    
+      
+        <li>
+          <a class="nav home" href="/"
+            
+            
+            id="home">
+            <i class='fas fa-home fa-fw'></i>&nbsp;主页
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/friends/"
+            
+              rel="nofollow"
+            
+            
+            id="friends">
+            <i class='fas fa-link fa-fw'></i>&nbsp;友链
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/about/"
+            
+              rel="nofollow"
+            
+            
+            id="about">
+            <i class='fas fa-info-circle fa-fw'></i>&nbsp;关于
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/2048-master/"
+            
+              rel="nofollow"
+            
+            
+            id="2048-master">
+            <i class='fas fa-th fa-fw'></i>&nbsp;2048游戏
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/bzojch/"
+            
+              rel="nofollow"
+            
+            
+            id="bzojch">
+            <i class='fas fa-book fa-fw'></i>&nbsp;BZOJ离线题库
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/editor/"
+            
+              rel="nofollow"
+            
+            
+            id="editor">
+            <i class='fas fa-edit fa-fw'></i>&nbsp;Markdown在线编辑
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/message"
+            
+            
+            id="message">
+            <i class='fas fa-comment fa-fw'></i>&nbsp;留言板
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/lab/"
+            
+              rel="nofollow"
+            
+            
+            id="lab">
+            <i class='fas fa-fire fa-fw'></i>&nbsp;实验室
+          </a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+    </cover>
+    <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          StevenMengのBlog
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-clock fa-fw'></i>&nbsp;近期文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogarchives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/projects/"
+                
+                
+                id="projects">
+								<i class='fas fa-code-branch fa-fw'></i>&nbsp;开源项目
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/"
+                
+                  rel="nofollow"
+                
+                
+                id="friends">
+								<i class='fas fa-link fa-fw'></i>&nbsp;我的友链
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://xaoxuu.com/wiki/material-x/"
+                
+                  rel="nofollow"
+                
+                
+                id="https:xaoxuu.comwikimaterial-x">
+								<i class='fas fa-book fa-fw'></i>&nbsp;主题文档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/about/"
+                
+                  rel="nofollow"
+                
+                
+                id="about">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于小站
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+  </div>
+
+
+  <div class="l_body">
+    <div class='body-wrapper' id="pjax-container">
+      <div class='l_main'>
+	
+		
+  <section class="post-list">
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/archives/6ce8a7e1.html">
+      CF280D k-Maximum Subsequence Sum 线段树
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://gaisaiyuno.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Steven_Meng</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-13</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="readmore">
+          <a href="/archives/6ce8a7e1.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/题解/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>题解</a>
+        
+          <a href="/tags/贪心/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>贪心</a>
+        
+          <a href="/tags/线段树/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>线段树</a>
+        
+          <a href="/tags/暴力/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>暴力</a>
+        
+          <a href="/tags/毒瘤/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>毒瘤</a>
+        
+          <a href="/tags/费用流/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>费用流</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/archives/82e66741.html">
+      CF405D Toy Sum 随机化
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://gaisaiyuno.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Steven_Meng</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-13</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="readmore">
+          <a href="/archives/82e66741.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/题解/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>题解</a>
+        
+          <a href="/tags/随机化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>随机化</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/archives/139c564f.html">
+      CF438D The Child and Sequence 线段树
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://gaisaiyuno.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Steven_Meng</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-13</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="readmore">
+          <a href="/archives/139c564f.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/题解/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>题解</a>
+        
+          <a href="/tags/线段树/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>线段树</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/archives/250f58e0.html">
+      P4986 逃离
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://gaisaiyuno.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Steven_Meng</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-13</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="readmore">
+          <a href="/archives/250f58e0.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/题解/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>题解</a>
+        
+          <a href="/tags/FFT/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>FFT</a>
+        
+          <a href="/tags/数学/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>数学</a>
+        
+          <a href="/tags/牛顿迭代/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>牛顿迭代</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/archives/5f98d0f3.html">
+      CF316 E3. Summer Homework
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://gaisaiyuno.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Steven_Meng</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-13</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="readmore">
+          <a href="/archives/5f98d0f3.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/题解/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>题解</a>
+        
+          <a href="/tags/线段树/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>线段树</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/archives/2af40d72.html">
+      CF145E Lucky Queries 线段树
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://gaisaiyuno.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Steven_Meng</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-13</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="readmore">
+          <a href="/archives/2af40d72.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/题解/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>题解</a>
+        
+          <a href="/tags/线段树/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>线段树</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/archives/7850e5e5.html">
+      数论学习笔记
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://gaisaiyuno.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Steven_Meng</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-13</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="readmore">
+          <a href="/archives/7850e5e5.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/数学/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>数学</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/archives/233c63b9.html">
+      P1627 [CQOI2009]中位数 前缀和
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://gaisaiyuno.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Steven_Meng</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-13</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="readmore">
+          <a href="/archives/233c63b9.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/题解/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>题解</a>
+        
+          <a href="/tags/数学/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>数学</a>
+        
+          <a href="/tags/前缀和/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>前缀和</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/archives/73ef83bb.html">
+      CF525E Anya and Cubes 双向搜索
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://gaisaiyuno.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Steven_Meng</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-13</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="readmore">
+          <a href="/archives/73ef83bb.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/题解/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>题解</a>
+        
+          <a href="/tags/搜索/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>搜索</a>
+        
+          <a href="/tags/双向搜索/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>双向搜索</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/archives/1c5d594e.html">
+      P2839 [国家集训队]middle（可持久化线段树+二分）
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://gaisaiyuno.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Steven_Meng</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-13</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="readmore">
+          <a href="/archives/1c5d594e.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/题解/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>题解</a>
+        
+          <a href="/tags/线段树/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>线段树</a>
+        
+          <a href="/tags/主席树/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>主席树</a>
+        
+          <a href="/tags/可持久化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>可持久化</a>
+        
+          <a href="/tags/作业/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>作业</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+      <br>
+      <div class="prev-next">
+        <div class="prev-next">
+          
+            <a class="prev" rel="prev" href="/archives/2019/page/17/">
+              <section class="post prev" >
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
+              </section>
+            </a>
+          
+          <p class="current">
+            18 / 19
+          </p>
+          
+            <a class="next" rel="next" href="/archives/2019/page/19/">
+              <section class="post next">
+                &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+              </section>
+            </a>
+          
+        </div>
+      </div>
+
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
+
+  
+
+
+	
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+        
+          
+          
+            <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://gitee.com/steven_meng/kon/raw/master/head.png'/>
+      </div>
+    
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:steven_mhy@qq.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/GaisaiYuno"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.luogu.org/space/show?uid=45109"
+              class="social fas fa-code flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+    <center>
+      <div id="binft"></span></div>
+      <script>
+          var binft = function (r) {
+            function t() {
+              return b[Math.floor(Math.random() * b.length)]
+            }  
+            function e() {
+              return String.fromCharCode(94 * Math.random() + 33)
+            }
+            function n(r) {
+              for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+                var l = document.createElement("span");
+                l.textContent = e(), l.style.color = t(), n.appendChild(l)
+              }
+              return n
+            }
+            function i() {
+              var t = o[c.skillI];
+              c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+            }
+            var l = "",
+            o = ["我太蒻了", "zyd太巨了","ypy太巨了","ygy太巨了","yxc太巨了","zhh太巨了","ljz太巨了"].map(function (r) {
+            return r + ""
+            }),
+            a = 2,
+            g = 1,
+            s = 5,
+            d = 75,
+            b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+            c = {
+              text: "",
+              prefixP: -s,
+              skillI: 0,
+              skillP: 0,
+              direction: "forward",
+              delay: a,
+              step: g
+            };
+            i()
+            };
+            binft(document.getElementById('binft'));
+        </script>
+    </center>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+
+          
+        
+      
+        
+          
+          
+            <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/archives/" href="/archives/"
+          
+            rel="nofollow"
+          
+          
+          id="archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/"
+          
+            rel="nofollow"
+          
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/tags/2-SAT/" style="font-size: 16.31px; color: #898989">2-SAT</a> <a href="/tags/A-star/" style="font-size: 14px; color: #999">A star</a> <a href="/tags/APIO/" style="font-size: 14px; color: #999">APIO</a> <a href="/tags/CDQ分治/" style="font-size: 14px; color: #999">CDQ分治</a> <a href="/tags/Dijkstra/" style="font-size: 14px; color: #999">Dijkstra</a> <a href="/tags/FFT/" style="font-size: 18.62px; color: #7a7a7a">FFT</a> <a href="/tags/FHQ-Treap/" style="font-size: 17.85px; color: #7f7f7f">FHQ Treap</a> <a href="/tags/GSS/" style="font-size: 18.62px; color: #7a7a7a">GSS</a> <a href="/tags/Kruskal/" style="font-size: 14px; color: #999">Kruskal</a> <a href="/tags/LCA/" style="font-size: 17.85px; color: #7f7f7f">LCA</a> <a href="/tags/NTT/" style="font-size: 14.77px; color: #949494">NTT</a> <a href="/tags/SPFA/" style="font-size: 15.54px; color: #8f8f8f">SPFA</a> <a href="/tags/ST表/" style="font-size: 14px; color: #999">ST表</a> <a href="/tags/Splay/" style="font-size: 14px; color: #999">Splay</a> <a href="/tags/bitset/" style="font-size: 14.77px; color: #949494">bitset</a> <a href="/tags/tarjan/" style="font-size: 14.77px; color: #949494">tarjan</a> <a href="/tags/trie/" style="font-size: 14px; color: #999">trie</a> <a href="/tags/三分法/" style="font-size: 14px; color: #999">三分法</a> <a href="/tags/主席树/" style="font-size: 18.62px; color: #7a7a7a">主席树</a> <a href="/tags/乱搞/" style="font-size: 15.54px; color: #8f8f8f">乱搞</a> <a href="/tags/二分/" style="font-size: 15.54px; color: #8f8f8f">二分</a> <a href="/tags/二分答案/" style="font-size: 14px; color: #999">二分答案</a> <a href="/tags/二进制/" style="font-size: 14.77px; color: #949494">二进制</a> <a href="/tags/仙人掌/" style="font-size: 14px; color: #999">仙人掌</a> <a href="/tags/位运算/" style="font-size: 14px; color: #999">位运算</a> <a href="/tags/作业/" style="font-size: 14px; color: #999">作业</a> <a href="/tags/倍增/" style="font-size: 17.08px; color: #848484">倍增</a> <a href="/tags/凸包/" style="font-size: 14.77px; color: #949494">凸包</a> <a href="/tags/分块/" style="font-size: 16.31px; color: #898989">分块</a> <a href="/tags/分治/" style="font-size: 14px; color: #999">分治</a> <a href="/tags/初赛/" style="font-size: 14px; color: #999">初赛</a> <a href="/tags/前缀和/" style="font-size: 14.77px; color: #949494">前缀和</a> <a href="/tags/动态开点/" style="font-size: 14px; color: #999">动态开点</a> <a href="/tags/动态规划/" style="font-size: 21.69px; color: #656565">动态规划</a> <a href="/tags/卡常/" style="font-size: 15.54px; color: #8f8f8f">卡常</a> <a href="/tags/双向搜索/" style="font-size: 14.77px; color: #949494">双向搜索</a> <a href="/tags/可持久化/" style="font-size: 17.85px; color: #7f7f7f">可持久化</a> <a href="/tags/启发式合并/" style="font-size: 15.54px; color: #8f8f8f">启发式合并</a> <a href="/tags/哈希/" style="font-size: 14.77px; color: #949494">哈希</a> <a href="/tags/回滚莫队/" style="font-size: 16.31px; color: #898989">回滚莫队</a> <a href="/tags/图论/" style="font-size: 20.92px; color: #6a6a6a">图论</a> <a href="/tags/圆方树/" style="font-size: 14px; color: #999">圆方树</a> <a href="/tags/堆/" style="font-size: 15.54px; color: #8f8f8f">堆</a> <a href="/tags/复数/" style="font-size: 14px; color: #999">复数</a> <a href="/tags/多项式/" style="font-size: 14px; color: #999">多项式</a> <a href="/tags/字符串哈希/" style="font-size: 14.77px; color: #949494">字符串哈希</a> <a href="/tags/完全背包/" style="font-size: 14px; color: #999">完全背包</a> <a href="/tags/实用/" style="font-size: 18.62px; color: #7a7a7a">实用</a> <a href="/tags/容斥/" style="font-size: 14.77px; color: #949494">容斥</a> <a href="/tags/尺取法/" style="font-size: 14.77px; color: #949494">尺取法</a> <a href="/tags/差分/" style="font-size: 14px; color: #999">差分</a> <a href="/tags/带修莫队/" style="font-size: 14px; color: #999">带修莫队</a> <a href="/tags/平衡树/" style="font-size: 19.38px; color: #747474">平衡树</a> <a href="/tags/并查集/" style="font-size: 18.62px; color: #7a7a7a">并查集</a> <a href="/tags/异或/" style="font-size: 14px; color: #999">异或</a> <a href="/tags/找规律/" style="font-size: 14px; color: #999">找规律</a> <a href="/tags/拓扑排序/" style="font-size: 14px; color: #999">拓扑排序</a> <a href="/tags/搜索/" style="font-size: 16.31px; color: #898989">搜索</a> <a href="/tags/数学/" style="font-size: 22.46px; color: #5f5f5f">数学</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/斜率优化/" style="font-size: 14.77px; color: #949494">斜率优化</a> <a href="/tags/暴力/" style="font-size: 19.38px; color: #747474">暴力</a> <a href="/tags/最小生成树/" style="font-size: 15.54px; color: #8f8f8f">最小生成树</a> <a href="/tags/最短路/" style="font-size: 14px; color: #999">最短路</a> <a href="/tags/期望/" style="font-size: 14px; color: #999">期望</a> <a href="/tags/权值线段树/" style="font-size: 14.77px; color: #949494">权值线段树</a> <a href="/tags/树上倍增/" style="font-size: 14px; color: #999">树上倍增</a> <a href="/tags/树上差分/" style="font-size: 14px; color: #999">树上差分</a> <a href="/tags/树上莫队/" style="font-size: 14.77px; color: #949494">树上莫队</a> <a href="/tags/树形dp/" style="font-size: 17.85px; color: #7f7f7f">树形dp</a> <a href="/tags/树状数组/" style="font-size: 15.54px; color: #8f8f8f">树状数组</a> <a href="/tags/树的直径/" style="font-size: 14.77px; color: #949494">树的直径</a> <a href="/tags/树链剖分/" style="font-size: 20.15px; color: #6f6f6f">树链剖分</a> <a href="/tags/模拟/" style="font-size: 14px; color: #999">模拟</a> <a href="/tags/模板/" style="font-size: 16.31px; color: #898989">模板</a> <a href="/tags/欧拉序/" style="font-size: 14px; color: #999">欧拉序</a> <a href="/tags/毒瘤/" style="font-size: 17.85px; color: #7f7f7f">毒瘤</a> <a href="/tags/比赛/" style="font-size: 15.54px; color: #8f8f8f">比赛</a> <a href="/tags/游记/" style="font-size: 14px; color: #999">游记</a> <a href="/tags/点分治/" style="font-size: 15.54px; color: #8f8f8f">点分治</a> <a href="/tags/牛顿迭代/" style="font-size: 14.77px; color: #949494">牛顿迭代</a> <a href="/tags/生成函数/" style="font-size: 14px; color: #999">生成函数</a> <a href="/tags/矩阵快速幂/" style="font-size: 14px; color: #999">矩阵快速幂</a> <a href="/tags/离线/" style="font-size: 14px; color: #999">离线</a> <a href="/tags/第一类斯特林数/" style="font-size: 14px; color: #999">第一类斯特林数</a> <a href="/tags/线段树/" style="font-size: 23.23px; color: #5a5a5a">线段树</a> <a href="/tags/线段树合并/" style="font-size: 14.77px; color: #949494">线段树合并</a> <a href="/tags/组合数/" style="font-size: 14.77px; color: #949494">组合数</a> <a href="/tags/背包/" style="font-size: 14.77px; color: #949494">背包</a> <a href="/tags/莫队/" style="font-size: 20.92px; color: #6a6a6a">莫队</a> <a href="/tags/计算几何/" style="font-size: 14.77px; color: #949494">计算几何</a> <a href="/tags/负环/" style="font-size: 14px; color: #999">负环</a> <a href="/tags/质数/" style="font-size: 14px; color: #999">质数</a> <a href="/tags/贪心/" style="font-size: 17.08px; color: #848484">贪心</a> <a href="/tags/费用流/" style="font-size: 14px; color: #999">费用流</a> <a href="/tags/随机/" style="font-size: 14.77px; color: #949494">随机</a> <a href="/tags/随机化/" style="font-size: 16.31px; color: #898989">随机化</a> <a href="/tags/题解/" style="font-size: 24px; color: #555">题解</a>
+    </div>
+  </section>
+
+
+<section class='widget hitokoto'>
+  
+<header class='pure'>
+  <div><i class="fas fa-code fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;一言</div>
+  
+</header>
+<div>
+      <div class="content pure">
+          <div>
+            <div style="display: table-cell;vertical-align: top; color:#B2B7F2;font-size:24px;font-family:'Times New Roman',serif;font-weight:bold;text-align:left;">“</div>
+            <div style="display: table-cell;text-align: left; vertical-align: middle; text-indent: 2em; padding: 0.8em 0.2em 1em 0.2em"><b><span style="color:burlywood;"><span id="hitokoto-content"></span></span></b></div>
+            <div style="display: table-cell; vertical-align: bottom; color:#B2B7F2;font-size:24px;font-family:'Times New Roman',serif;font-weight:bold;text-align:left;">”</div>
+          </div>
+          <div style="text-align: right; font-size: 0.8em; color: black;" id="hitokoto-from"></div>
+</section>
+
+<section class="widget comments">
+    <div id="body_hot_comment"></div>
+</section>
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class='widget music'>
+    
+<header class='pure'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;我喜欢的音乐</div>
+  
+</header>
+
+    <div class='content pure'>
+      
+  <link rel="stylesheet" href="/dist/APlayer.min.css" rel="noreferrer">
+  <div id="aplayer"></div>
+    <script type="text/javascript" src="/dist/APlayer.min.js" rel="noreferrer"></script>
+    <script type="text/javascript" src="/dist/music.js" rel="noreferrer"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+          
+        
+      
+        
+          
+          
+        
+      
+    
+
+  
+</aside>
+<footer id="footer" class="clearfix">
+  
+    <div class="footer">
+      <p>Copyright StevenMeng@2019</p>
+
+    </div>
+    <br>
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="mailto:steven_mhy@qq.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/GaisaiYuno"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://www.luogu.org/space/show?uid=45109"
+            class="social fas fa-code flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  <!-- <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div> -->
+  <div>
+    本站使用
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
+    作为主题
+    
+    。
+  </div>
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+
+
+	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+	
+
+	
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+  <!-- fastclick -->
+  <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+  </script>
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('') {
+          $('').backstretch(
+          ["https://img.xjh.me/desktop/bg/nature/65253358_p0.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["https://img.xjh.me/desktop/bg/nature/65253358_p0.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.8/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.8/js/search.js"></script>
+
+
+
+
+<!-- 夝制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+
+</body>
+</html>

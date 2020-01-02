@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Markdown在线编辑</title>
+<link rel="shortcut icon" href="https://camo.githubusercontent.com/b39e5c062500d805c098bc47a9713d420d8130aa/68747470733a2f2f70616e64616f2e6769746875622e696f2f656469746f722e6d642f696d616765732f6c6f676f732f656469746f726d642d6c6f676f2d313830783138302e706e67">
+<html>
+<head>
+    <link rel="stylesheet" href="editor.md/css/editormd.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="editor.md/editormd.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var editor = editormd("editor", {
+                width: "100%",
+                height: "700pxs",
+                //markdown: "123",     // dynamic set Markdown text
+                path : "editor.md/lib/"  // Autoload modules mode, codemirror, marked... dependents libs path
+            });
+        });
+	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150421519-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-150421519-2');
+	</script>
+<body>
+    <div id="editor">
+<textarea style="display:none;">### [Editor.md](https://github.com/pandao/editor.md)
+
+有一部分是自己魔改的，解决了Katex下标解析错误的问题
+
+鉴于现在bug比较多，大家可以到[这里](https://github.com/GaisaiYuno/gaisaiyuno.github.io/issues/337)汇报bug
+
+</textarea>
+    </div>
+</body>
+</html>

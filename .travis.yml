@@ -1,0 +1,48 @@
+language: node_js
+node_js: stable
+
+cache:
+    apt: true
+    directories:
+        - node_modules
+
+notifications:
+    email:
+        recipients:
+            - steven_mhy@outlook.com #你的邮箱地址
+        on_success: change
+        on_failure: always
+
+# turn off the clone of submodules for change the SSH to HTTPS in .gitmodules to avoid the error
+git:
+  submodules: false
+        
+before_install:
+    - export TZ='Asia/Shanghai'
+    - npm install hexo-cli -g
+
+install:
+    - npm install
+
+script:
+    - hexo g
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "GaisaiYuno"
+  - git config user.email "steven_mhy@outlook.com"
+  - git add .
+  - git commit -m "Update blog content by Travis CI"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+
+branches:
+    only:
+        - master
+
+env:
+    global:
+        # Github Pages
+        - GH_REF: github.com/xxxr/xxx.github.io.git
+        # Coding Pages
+        - CD_REF: git.coding.net/xxxr/xxx.git
