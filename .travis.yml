@@ -34,8 +34,7 @@ after_script:
   - git config user.email "steven_mhy@outlook.com"
   - git add .
   - git commit -m "Update blog content by Travis CI"
-  - git remote add origin https://github.com/GaisaiYuno/gaisaiyuno.github.io
-  - git push origin master 
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 
 branches:
     only:
