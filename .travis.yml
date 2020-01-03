@@ -10,7 +10,7 @@ notifications:
     email:
         recipients:
             - steven_mhy@qq.com #你的邮箱地址
-        on_success: always
+        on_success: always 
         on_failure: always
 
 # turn off the clone of submodules for change the SSH to HTTPS in .gitmodules to avoid the error
