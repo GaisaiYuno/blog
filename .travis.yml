@@ -10,7 +10,7 @@ notifications:
     email:
         recipients:
             - steven_mhy@outlook.com #你的邮箱地址
-        on_success: change
+        on_success: always
         on_failure: always
 
 # turn off the clone of submodules for change the SSH to HTTPS in .gitmodules to avoid the error
@@ -28,6 +28,7 @@ script:
     - hexo g
 
 after_script:
+  - cp -r ./temp/. ./public/
   - cd ./public
   - git init
   - git config user.name "GaisaiYuno"
