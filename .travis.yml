@@ -9,7 +9,7 @@ cache:
 notifications:
     email:
         recipients:
-            - steven_mhy@outlook.com #你的邮箱地址
+            - steven_mhy@qq.com #你的邮箱地址
         on_success: always
         on_failure: always
 
@@ -19,7 +19,7 @@ git:
         
 before_install:
     - export TZ='Asia/Shanghai'
-    - npm install hexo-cli -g
+    - npm install hexo-cli -g 
 
 install:
     - npm install
