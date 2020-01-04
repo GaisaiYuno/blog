@@ -36,92 +36,13 @@
   <script>
 	var pjax = new Pjax({
 		elements: "a",
-		// selectors: [
-		// "title",
-		// ".l_body",
-		// "#links",
-		// ".comments",
-		// "#pages",
-		// ]
 		selectors: [
-		"title",
-		".l_body"
+			"title",
+			".l_body"
 		]
 	})
-   // 开始 PJAX 执行的函数
-   document.addEventListener('pjax:send', function (){
-	   $(".loading").css("display", "block");
-	   var gitalk = new Gitalk({
-			clientID: "<%- config.gitalk.clientID %>",
-			clientSecret: "<%- config.gitalk.clientSecret %>",
-			repo: "<%- config.gitalk.repo %>",
-			owner: "<%- config.gitalk.owner %>",
-			admin: "<%- config.gitalk.admin %>",
-			<% if(page.gitalk && page.gitalk.id) { %>
-				id: "<%= page.gitalk.id %>",
-			<% } else { %>
-				id: location.pathname,      // Ensure uniqueness and length less than 50
-			<% } %>
-			distractionFreeMode: false,  // Facebook-like distraction free mode
-		});
-		gitalk.render('gitalk-container');
-		fetch('https://v1.hitokoto.cn/?c=a')
-      .then(function (res){
-        return res.json();
-      })
-      .then(function (data) {
-        var h_content = document.getElementById('hitokoto-content');
-        var h_from = document.getElementById('hitokoto-from');
-        h_content.innerText = data.hitokoto; 
-        h_from.innerText = "——" + data.from; 
-      })
-      .catch(function (err) {
-        console.error(err);
-      })
-   });
-
-   // PJAX 完成之后执行的函数，可以和上面的重载放在一起
-   document.addEventListener('pjax:complete', function (){
-	   $(".loading").css("display", "none");
-	   $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function() {//渲染mathjax
-			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-			// entry-content是文章页的内容div的class
-			var math = document.getElementsByClassName("entry-content")[0];
-			MathJax.Hub.Queue(["Typeset",MathJax.Hub,math]);
-		});
-		$(".article-entry").find("img").each(function () {//渲染fancy box
-			var t = document.createElement("a");
-			$(t).attr("data-fancybox", "gallery"),
-			$(t).attr("href", $(this).attr("src")),
-			$(this).wrap(t)
-		})
-		wpac_init = window.wpac_init || [];
-		wpac_init.push({widget: 'Rating', id: 21085});//渲染widget pack（点赞系统）
-		WIDGETPACK_LOADED=false;
-		(function() {
-			WIDGETPACK_LOADED = true;
-			var mc = document.createElement('script');
-			mc.type = 'text/javascript';
-			mc.async = true;
-			mc.src = 'https://embed.widgetpack.com/widget.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
-		})();
-		
-		var gitalk = new Gitalk({
-			clientID: "<%- config.gitalk.clientID %>",
-			clientSecret: "<%- config.gitalk.clientSecret %>",
-			repo: "<%- config.gitalk.repo %>",
-			owner: "<%- config.gitalk.owner %>",
-			admin: "<%- config.gitalk.admin %>",
-			<% if(page.gitalk && page.gitalk.id) { %>
-				id: "<%= page.gitalk.id %>",
-			<% } else { %>
-				id: location.pathname,      // Ensure uniqueness and length less than 50
-			<% } %>
-			distractionFreeMode: false,  // Facebook-like distraction free mode
-		});
-		gitalk.render('gitalk-container');
-		fetch('https://v1.hitokoto.cn/?c=a')
+	function LoadHitoKoto(){
+		fetch('https://v1.hitokoto.cn/?c=a')//加载一言
 		.then(function (res){
 			return res.json();
 		})
@@ -134,6 +55,68 @@
 		.catch(function (err) {
 			console.error(err);
 		})
+	}
+	function LoadGitalk(){
+		$.getScript("/js/gitalk.js", function() {
+			var gitalk = new Gitalk({
+				clientID: "11a743f6f22948aec581",
+				clientSecret: "792183868cbc5db2d4b89dbb15450b83fc3880a8",
+				repo: "gaisaiyuno.github.io",
+				owner: "GaisaiYuno",
+				admin: "GaisaiYuno",
+				id: location.pathname,      // Ensure uniqueness and length less than 50
+				distractionFreeMode: false  // Facebook-like distraction free mode
+			});
+			gitalk.render('gitalk-container');
+		});
+	}
+	function LoadMathJax(){
+		$.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function() {//渲染mathjax
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+			// entry-content是文章页的内容div的class
+			var math = document.getElementsByClassName("entry-content")[0];
+			MathJax.Hub.Queue(["Typeset",MathJax.Hub,math]);
+		});
+	}
+	function LoadFancybox(){
+		$(".article-entry").find("img").each(function () {//渲染fancy box
+			var t = document.createElement("a");
+			$(t).attr("data-fancybox", "gallery"),
+			$(t).attr("href", $(this).attr("src")),
+			$(this).wrap(t)
+		})
+	}
+	function LoadWpac(){
+		wpac_init = window.wpac_init || [];
+		wpac_init.push({widget: 'Rating', id: 21085});//渲染widget pack（点赞系统）
+		WIDGETPACK_LOADED=false;
+		(function() {
+			WIDGETPACK_LOADED = true;
+			var mc = document.createElement('script');
+			mc.type = 'text/javascript';
+			mc.async = true;
+			mc.src = 'https://embed.widgetpack.com/widget.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+		})();
+	}
+    // 开始 PJAX 执行的函数
+    document.addEventListener('pjax:send', function (){
+		$(".loading").css("display", "block");//加载转圈圈的css
+		LoadMathJax();
+		LoadHitoKoto();
+		LoadWpac();
+		LoadFancybox();
+		LoadGitalk();
+   });
+
+   // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+   document.addEventListener('pjax:complete', function (){
+		$(".loading").css("display", "none");
+		LoadMathJax();
+		LoadHitoKoto();
+		LoadWpac();
+		LoadFancybox();
+		LoadGitalk();
    });
   </script>
 
