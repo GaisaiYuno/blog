@@ -38,7 +38,8 @@
 		elements: "a",
 		selectors: [
 			"title",
-			".l_body"
+			".l_body",
+			"cover-wrapper"
 		]
 	})
 	function LoadHitoKoto(){
@@ -102,11 +103,6 @@
     // 开始 PJAX 执行的函数
     document.addEventListener('pjax:send', function (){
 		$(".loading").css("display", "block");//加载转圈圈的css
-		// LoadMathJax();
-		// LoadHitoKoto();
-		// LoadWpac();
-		// LoadFancybox();
-		// LoadGitalk();
    });
 
    // PJAX 完成之后执行的函数，可以和上面的重载放在一起
