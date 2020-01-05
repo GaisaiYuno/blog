@@ -123,6 +123,20 @@ tags:
 
 插入`layout/_partial/head.ejs`。
 
-后来发现gitalk的css会出点问题，于是要把gitalk.css的全部内容加入`source/style.less`，这样我们就完成了pjax配置。
+后来发现gitalk的css会出点问题，需要把gitalk.css的全部内容加入`source/style.less`。
+
+友链的图片显示也会有点问题，我们就不要占位图了，把`layout/links.ejs`里面的：
+
+```html
+<img class='avatar' src='<%- theme.avatar_placeholder %>' data-echo='<%- url_for(item.avatar ? item.avatar : "https://img.vim-cn.com/a4/87a96e2e01b1180bba1e76e190df5220378c1a.png") %>'/>
+```
+
+改成：
+
+```html
+<img class='avatar' src='<%- url_for(item.avatar ? item.avatar : "https://img.vim-cn.com/a4/87a96e2e01b1180bba1e76e190df5220378c1a.png") %>'/>
+```
+
+这样就差不多了。
 
 > 参考：https://sunhang.top/2019/12/20/pjax/
