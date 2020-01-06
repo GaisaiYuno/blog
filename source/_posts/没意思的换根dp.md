@@ -19,7 +19,7 @@ date: 2019-11-13 22:37:31
 
 以$u$为根：
 
-$\sum _{i \in A} dis(i,u)^2 c[i]+w^2c[v]+\sum _{i\in B}dis(i,u)^2c[i]$
+$\sum _{i\in A}dis(i,u)^2 c[i]+w^2c[v]+\sum _{i\in B}dis(i,u)^2c[i]$
 
 以$v$为根：
 
