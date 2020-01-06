@@ -158,6 +158,14 @@ links:
       tags:
       - 前端
       - JS
+    - name: BOHC!(a blog of hechao)
+      avatar: https://cdn.jsdelivr.net/gh/wudihechao/cdn@1.49/img/custom/avatar.gif
+      url: https://hewanyue.com
+      backgroundColor: '#fff'
+      textColor: '#667086'
+      tags:
+      - DEVOPS
+      - 技术交流
 ---
 
 欢迎各位交换友链！
