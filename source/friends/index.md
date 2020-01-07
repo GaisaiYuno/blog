@@ -158,7 +158,7 @@ links:
       tags:
       - 前端
       - JS
-    - name: BOHC!(a blog of hechao)
+    - name: BOHC!
       avatar: https://cdn.jsdelivr.net/gh/wudihechao/cdn@1.49/img/custom/avatar.gif
       url: https://hewanyue.com
       backgroundColor: '#fff'
