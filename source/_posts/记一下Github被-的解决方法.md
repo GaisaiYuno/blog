@@ -1,8 +1,9 @@
 ---
 title: 记一下Github被*的解决方法
-date: 2020-01-22 16:56:04
 tags:
   - 实用
+abbrlink: 75e6bc2e
+date: 2020-01-22 16:56:04
 ---
 
 在hosts文件(C:\Windows\System32\drivers\etc)里面添加：
