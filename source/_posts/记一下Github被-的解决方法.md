@@ -6,7 +6,7 @@ abbrlink: 75e6bc2e
 date: 2020-01-22 16:56:04
 ---
 
-在hosts文件(C:\Windows\System32\drivers\etc)里面添加：
+如果是Windows，在hosts文件(C:\Windows\System32\drivers\etc)里面添加：
 
 ```plain
 # GitHub Start 
@@ -27,6 +27,10 @@ date: 2020-01-22 16:56:04
 151.101.100.133 avatars8.githubusercontent.com 
 # GitHub End
 ```
+
+若是linux的话，可以去/etc/hosts修改
+
+可以用vim /etc/hosts修改，先安装vim，按i，输入，再按esc，输入:wq直接退出
 
 https://www.ipaddress.com/
 到这个网站，查avatars0.githubusercontent.com ，就能得到最新的地址，替换掉原文的151.101.100.133就行了
