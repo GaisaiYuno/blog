@@ -185,7 +185,11 @@ social:
   - icon: fab fa-github
     url: https://github.com/GaisaiYuno
   - icon: fas fa-code
-    url: https://www.luogu.org/space/show?uid=45109
+    url: https://www.luogu.com.cn/user/45109
+  - icon: fas fa-headphones-alt
+    url: https://music.163.com/#/user/home?id=1650189892
+  - icon: fab fa-zhihu
+    url: https://www.zhihu.com/people/stevenmhy
 
 
 # 分享按钮
