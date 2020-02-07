@@ -60,15 +60,21 @@
 	function LoadGitalk(){
 		$.getScript("/js/gitalk.js", function() {
 			var gitalk = new Gitalk({
-				clientID: "11a743f6f22948aec581",
-				clientSecret: "792183868cbc5db2d4b89dbb15450b83fc3880a8",
-				repo: "gaisaiyuno.github.io",
-				owner: "GaisaiYuno",
-				admin: "GaisaiYuno",
-				id: location.pathname,      // Ensure uniqueness and length less than 50
-				distractionFreeMode: false  // Facebook-like distraction free mode
-			});
-			gitalk.render('gitalk-container');
+            clientID: '{{ theme.gitalk.client_id }}',
+            clientSecret: '{{ theme.gitalk.client_secret }}',
+            accessToken: '{{ theme.gitalk.accessToken }}',
+            repo: '{{ theme.gitalk.repo }}',
+            owner: '{{ theme.gitalk.github_id }}',
+            admin: ['{{ theme.gitalk.admin_user }}'],
+            id: md5(location.pathname),
+            {% if theme.gitalk.language == '' %}
+              language: window.navigator.language || window.navigator.userLanguage,
+            {% else %}
+              language: '{{ theme.gitalk.language }}',
+            {% endif %}
+            distractionFreeMode: '{{ theme.gitalk.distraction_free_mode }}'
+          });
+          gitalk.render('gitalk-container');
 		});
 	}
 	function LoadMathJax(){

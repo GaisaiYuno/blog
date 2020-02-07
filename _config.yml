@@ -98,6 +98,7 @@ gitalk:
   clientID: 11a743f6f22948aec581  # Github Application Client ID
   clientSecret: 792183868cbc5db2d4b89dbb15450b83fc3880a8 # Github Application Client Secret
   repo: gaisaiyuno.github.io # Repository name to store issues
+  accessToken: 36159b9ee938e02ee4f766fb299f885b4e477dd7 #Read-only Access
   owner: GaisaiYuno
   admin: [GaisaiYuno] # GitHub repo owner and collaborators, only these guys can initialize github issues
   # Gitalk's display language depends on user's browser or system environment
