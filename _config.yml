@@ -100,7 +100,9 @@ gitalk:
   repo: gaisaiyuno.github.io # Repository name to store issues
   accessToken: 36159b9ee938e02ee4f766fb299f885b4e477dd7 #Read-only Access
   owner: GaisaiYuno
-  admin: [GaisaiYuno] # GitHub repo owner and collaborators, only these guys can initialize github issues
+  admin: [GaisaiYuno] 
+  language: zh-CN
+  # GitHub repo owner and collaborators, only these guys can initialize github issues
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en, es-ES, fr, ru, zh-CN, zh-TW

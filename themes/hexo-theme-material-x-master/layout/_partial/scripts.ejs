@@ -139,19 +139,17 @@
   <script src="/js/gitalk.js"></script>
   <script type="text/javascript">
     var gitalk = new Gitalk({
-      clientID: "<%- config.gitalk.clientID %>",
-      clientSecret: "<%- config.gitalk.clientSecret %>",
-      repo: "<%- config.gitalk.repo %>",
-      owner: "<%- config.gitalk.owner %>",
-      admin: "<%- config.gitalk.admin %>",
-      <% if(page.gitalk && page.gitalk.id) { %>
-        id: "<%= page.gitalk.id %>",
-      <% } else { %>
-        id: location.pathname,      // Ensure uniqueness and length less than 50
-      <% } %>
-      distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-    gitalk.render('gitalk-container');
+		clientID: '<%= theme.gitalk.clientID %>',
+		clientSecret: '<%= theme.gitalk.clientSecret %>',
+		accessToken: '<%= theme.gitalk.accessToken %>',
+		repo: '<%= theme.gitalk.repo %>',
+		owner: '<%= theme.gitalk.owner %>',
+		admin: ['<%= theme.gitalk.admin %>'],
+		id: location.pathname,
+		language: '<%= theme.gitalk.language %>',
+		distractionFreeMode: '<%= theme.gitalk.distraction_free_mode %>'
+	});
+	gitalk.render('gitalk-container');
   </script>
 <% } %>
 

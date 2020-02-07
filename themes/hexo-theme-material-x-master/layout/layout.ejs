@@ -60,21 +60,17 @@
 	function LoadGitalk(){
 		$.getScript("/js/gitalk.js", function() {
 			var gitalk = new Gitalk({
-            clientID: '{{ theme.gitalk.client_id }}',
-            clientSecret: '{{ theme.gitalk.client_secret }}',
-            accessToken: '{{ theme.gitalk.accessToken }}',
-            repo: '{{ theme.gitalk.repo }}',
-            owner: '{{ theme.gitalk.github_id }}',
-            admin: ['{{ theme.gitalk.admin_user }}'],
-            id: md5(location.pathname),
-            {% if theme.gitalk.language == '' %}
-              language: window.navigator.language || window.navigator.userLanguage,
-            {% else %}
-              language: '{{ theme.gitalk.language }}',
-            {% endif %}
-            distractionFreeMode: '{{ theme.gitalk.distraction_free_mode }}'
-          });
-          gitalk.render('gitalk-container');
+				clientID: '<%= theme.gitalk.clientID %>',
+				clientSecret: '<%= theme.gitalk.clientSecret %>',
+				accessToken: '<%= theme.gitalk.accessToken %>',
+				repo: '<%= theme.gitalk.repo %>',
+				owner: '<%= theme.gitalk.owner %>',
+				admin: ['<%= theme.gitalk.admin %>'],
+				id: location.pathname,
+				language: '<%= theme.gitalk.language %>',
+				distractionFreeMode: '<%= theme.gitalk.distraction_free_mode %>'
+			});
+			gitalk.render('gitalk-container');
 		});
 	}
 	function LoadMathJax(){
