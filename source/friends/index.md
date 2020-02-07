@@ -166,6 +166,13 @@ links:
       tags:
       - DEVOPS
       - 技术交流
+    - name: Ray's Blog
+      avatar: https://raycoder.me/images/fav.png
+      url: https://raycoder.me/
+      backgroundColor: '#fff'
+      textColor: '#667086'
+      tags:
+      - 夜晚再黑，也压不过雪的白
 ---
 
 欢迎各位交换友链！
