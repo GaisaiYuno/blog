@@ -50,29 +50,32 @@ if (post.meta && (post.meta.footer !== undefined && post.meta.footer !== null)) 
   </section>
 <% } else if (position == 'footer') { %>
   <section class='meta' id="footer-meta">
-	<hr>
-	<div style="text-align: center; font-size: 20px">给一个五星好评吧</div>
-	<div style="text-align: center;" id="wpac-rating">正在加载点赞系统</div>
-	<script type="text/javascript">
-		wpac_init = window.wpac_init || [];
-		wpac_init.push({widget: 'Rating', id: 21085});
-		(function() {
-			if ('WIDGETPACK_LOADED' in window) return;
-			WIDGETPACK_LOADED = true;
-			var mc = document.createElement('script');
-			mc.type = 'text/javascript';
-			mc.async = true;
-			mc.src = 'https://embed.widgetpack.com/widget.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
-		})();
-	</script>
-	<a href="https://widgetpack.com" class="wpac-cr"></a>
+	<% if (theme.widget_pack.enable != false) { %>
+		<div style="text-align: center; font-size: 20px"><%= theme.widget_pack.hint %></div>
+		<div style="text-align: center;" id="wpac-rating">正在加载点赞系统</div>
+		<script type="text/javascript">
+			wpac_init = window.wpac_init || [];
+			wpac_init.push({widget: 'Rating', id: <%= theme.widget_pack.id %> });
+			(function() {
+				if ('WIDGETPACK_LOADED' in window) return;
+				WIDGETPACK_LOADED = true;
+				var mc = document.createElement('script');
+				mc.type = 'text/javascript';
+				mc.async = true;
+				mc.src = 'https://embed.widgetpack.com/widget.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+			})();
+		</script>
+		<a href="https://widgetpack.com" class="wpac-cr"></a>
+	<% } %>
+
     <div class='new-meta-box'>
       <% (bottomMetas).forEach(function(meta){ %>
         <% if(meta != 'title'){ %>
           <%- partial('../_meta/' + meta, {post: post, isPostList: isPostList}) %>
         <% } %>
       <% }) %>
-    </div>
+	</div>
+	
   </section>
 <% } %>

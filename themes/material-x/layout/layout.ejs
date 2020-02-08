@@ -142,7 +142,7 @@
 			fixed=true
 			color="<%= theme.music.color %>"
 			mode="<%= theme.music.mode %>"
-			autoplay=<%= theme.music.autoplay == false ? true:false %>
+			autoplay=<%= theme.music.autoplay == "false" ? true:false %>
 			volume=<%= theme.music.volume %>
 		>
 		</meting-js>
@@ -150,7 +150,7 @@
   <% } %>
   <script>
 	  <% if(theme.latest_comments.enable != false){ %>
-		  get_latest_comments("<%= theme.repo %>");
+		  get_latest_comments("<%= theme.latest_comments.repo %>");
 	  <% } %>
   </script>
 </body>

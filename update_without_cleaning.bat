@@ -1,2 +1,2 @@
-hexo d
+hexo g && hexo d
 PAUSE

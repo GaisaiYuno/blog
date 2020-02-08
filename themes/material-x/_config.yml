@@ -10,8 +10,6 @@ info:
       search: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.8/js/search.js
       volantis: https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0.5/js/volantis.min.js
 
-
-
 ############################### 主题风格 ###############################
 # style: material    # material: 导航栏和标题栏背景是主题色
 style: pure        # pure: 导航栏和标题栏背景是白色
@@ -27,6 +25,7 @@ fastclick: true
 
 widget_pack:
   enable: true
+  hint: 来了就留下您的评分吧！
   id: 21085
 
 ############################### 默认值 ###############################
@@ -41,7 +40,7 @@ music:
   type: playlist       # song （单曲） album （专辑） playlist （歌单） search （搜索）
   id: 2482575335       # 歌曲/专辑/歌单 ID
   volume: 0.7          # 音量, 0~1
-  autoplay: false          # 自动播放
+  autoplay: false      # 自动播放
 
 # 友链页头像占位图因为使用pjax，被我阉割掉了
 
@@ -130,6 +129,7 @@ menu_mobile:
 # 默认的meta信息，文章中没有配置则按照这里的配置来显示，设置为false则不显示
 # 其中，title只在header中有效，music和thumbnail无需在这里设置，文章中有则显示
 # 如果tags放置在meta.header中，那么在post列表中不显示（因为卡片下方已经有了）
+
 meta:
   header: [title, author, date, categories, counter, top, thumbnail]
   footer: [updated, tags, share]
@@ -173,12 +173,13 @@ sidebar:
       rel: nofollow
 
   - widget: tagcloud
-	#icon: fas fa-code
 	
+  - widget: latest_comments
+
   # - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
+  
   - widget: hitokoto
 
-  - widget: latest_comments
 
 # 社交信息
 social:
@@ -215,7 +216,7 @@ share:
 
 
 
-footer: 'Copyright StevenMeng@2019'
+footer: 'Copyright StevenMeng@2019' # 填上您的大名
 
 
 ############################### 评论系统 ###############################
@@ -226,7 +227,7 @@ footer: 'Copyright StevenMeng@2019'
 #   app_key: 你的appKey
 
 ############################### 杂项，请勿删除 ###############################
-#valine配置
+#valine配置（暂不支持）
 valine:
   enable: false # 如果你想用Valine评论系统，请设置enable为true
   volantis: false # 是否启用volantis版本（禁止匿名，增加若干贴吧、QQ表情）
