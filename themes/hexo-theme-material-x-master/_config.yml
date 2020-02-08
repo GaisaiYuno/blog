@@ -135,6 +135,8 @@ meta:
 # 主体元素，你也可以在页面的Front-matter中设置
 body: [article, comments]
 
+repo: gaisaiyuno/gaisaiyuno.github.io # 您的repo地址（最新评论用）
+
 # 侧边栏小部件，默认按下面给定的顺序全部显示，文章中还可以自定义显示一部分以及顺序
 sidebar:
   - widget: author
@@ -170,8 +172,10 @@ sidebar:
     #icon: fas fa-code
   
   # - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
-    
+
   - widget: hitokoto
+
+  - widget: latest_comments
 
 # 社交信息
 social:
@@ -217,10 +221,6 @@ footer: 'Copyright StevenMeng@2019'
 # leancloud: 要使用哪个请复制到根目录配置文件！
 #   app_id: 你的appId
 #   app_key: 你的appKey
-
-
-# link1 : https://api.github.com/repos/asdfv1929/asdfv1929.github.io/issues?client_id=5fe36b6fb87ecd8e46f4&client_secret=075b050ff7b5e6277fe683d300504bfa5e49037c&labels=Gitalk,%2F2018%2F01%2F20%2Fgitalk%2F&t=1567233272699
-# link2 : https://api.github.com/repos/GaisaiYuno/gaisaiyuno.github.io/issues?client_id=11a743f6f22948aec581&client_secret=792183868cbc5db2d4b89dbb15450b83fc3880a8&labels=Gitalk,%2Farchives%2F5bce2e78.html&t=1567233254165
 
 ############################### 杂项，请勿删除 ###############################
 #valine配置
