@@ -1,6 +1,6 @@
-# Material X魔改版本
+# Hexo主题Material X改编版本
 
-[Material X主题](https://github.com/xaoxuu/hexo-theme-material-x)的魔改版本，参照各网友的博客魔改而来，感谢所有模块的原作者。
+Hexo主题[Material X](https://github.com/xaoxuu/hexo-theme-material-x)的改编版本，参照各网友的博客魔改而来，感谢所有模块的原作者。
 
 ## 预览图
 
@@ -8,9 +8,8 @@
 
 ![2.PNG](https://i.loli.net/2020/02/08/i6LaPtVCx58MyFd.png)
 
-## 改动部分
+## 新增功能
 
-- 强制使用MathJax、FancyBox、pjax。
 - 增加[一言hitokoto](https://hitokoto.cn/)。
 - 增加评分系统[WidgetPack](https://widgetpack.com/)。
 - 增加pjax，感谢[sunhang.top](https://sunhang.top/2019/12/20/pjax/)。
@@ -18,9 +17,14 @@
 - 支持aplayer使用自己的music.js。
 - 增加2048、BZOJ离线题库、Markdown在线编辑、留言板、实验室等功能。
 
+## 强制使用
+
+MathJax、FancyBox、pjax
+
 ## 不支持
 
-- pjax暂不支持除gitalk之外的评论系统
+- pjax暂不支持除gitalk之外的评论系统。
+- 由于开启了全站no-referrer，无法使用不蒜子统计。
 
 ## 使用方法
 
@@ -44,7 +48,7 @@ enable设成true，下面的repo填写用户名/github pages地址。
 
 ### 评分系统
 
-首先，上 https://widgetpack.com/ 注册一个账号，获得一个id，然后进入Rating/Setting，将Vote via改成IP address，这样不用注册账号也能评分。
+首先，上 https://widgetpack.com/ 注册一个账号，获得一个id，然后进入Rating/Setting，将Vote via改成IP address，这样不用登陆就可以评分。
 
 ```yaml
 widget_pack:
@@ -61,7 +65,7 @@ widget_pack:
 - widget: hitokoto
 ```
 
-只要加上这一项就行了
+加上这一项，把widget调到想要的位置。
 
 ### Aplayer
 
@@ -83,7 +87,7 @@ music:
 
 own代表是否使用自己的music.js，如果设为true，就必须填写path参数，代表music.js位置，而且下面的color, mode, server, type, id, volume, autoplay等参数将被忽略；如果设为false，代表使用在线歌单，path将会被忽略，其他参数参见注释。
 
-这里安利一下我自己的[music.js生成器](https://github.com/GaisaiYuno/missevan-spider)
+这里安利一下我自己的[music.js生成器](https://github.com/GaisaiYuno/missevan-spider)。
 
 ### temp文件夹
 
@@ -99,3 +103,4 @@ own代表是否使用自己的music.js，如果设为true，就必须填写path�
 - generate_public_without_updating.bat：**第一次使用必须执行**，它的作用就是生成public文件夹并且把temp文件夹复制进去。
 
 - update_without_cleaning.bat：不clean，直接上传。
+
