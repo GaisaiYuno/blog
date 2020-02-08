@@ -172,7 +172,8 @@ links:
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 夜晚再黑，也压不过雪的白
+      - Python
+      - 爬虫
 ---
 
 欢迎各位交换友链！
