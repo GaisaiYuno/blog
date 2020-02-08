@@ -11,11 +11,11 @@
 ## 改动部分
 
 - 强制使用MathJax、FancyBox、pjax。
-
 - 增加[一言hitokoto](https://hitokoto.cn/)。
 - 增加评分系统[WidgetPack](https://widgetpack.com/)。
 - 增加pjax，感谢[sunhang.top](https://sunhang.top/2019/12/20/pjax/)。
-- 增加最新评论功能，感谢[辣椒の酱]([https://removeif.github.io/theme/%E5%8D%9A%E5%AE%A2%E4%B8%ADgitalk%E6%9C%80%E6%96%B0%E8%AF%84%E8%AE%BA%E7%9A%84%E8%8E%B7%E5%8F%96.html](https://removeif.github.io/theme/博客中gitalk最新评论的获取.html))。
+- 增加最新评论功能，感谢[辣椒の酱](https://removeif.github.io/theme/博客中gitalk最新评论的获取.html)。
+- 支持aplayer使用自己的music.js。
 - 增加2048、BZOJ离线题库、Markdown在线编辑、留言板、实验室等功能。
 
 ## 不支持
@@ -44,7 +44,7 @@ enable设成true，下面的repo填写用户名/github pages地址。
 
 ### 评分系统
 
-首先，上https://widgetpack.com/注册一个账号，获得一个id，然后进入Rating/Setting，将Vote via改成IP address，这样不用注册账号也能评分。
+首先，上 https://widgetpack.com/ 注册一个账号，获得一个id，然后进入Rating/Setting，将Vote via改成IP address，这样不用注册账号也能评分。
 
 ```yaml
 widget_pack:
@@ -62,6 +62,28 @@ widget_pack:
 ```
 
 只要加上这一项就行了
+
+### Aplayer
+
+由于使用了pjax，这里不能使用原主题侧边栏模式，只能使用吸底模式。
+
+ ```yaml
+music:
+  enable: true         # 是否启用
+  own: false           # 是否使用自己的music.js
+  path: /js/music.js   # music.js位置
+  color: '#1BCDFC'     # 主题色
+  mode: circulation    # random （随机） single （单曲） circulation （列表循环） order （列表）
+  server: netease      # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
+  type: playlist       # song （单曲） album （专辑） playlist （歌单） search （搜索）
+  id: 2482575335       # 歌曲/专辑/歌单 ID
+  volume: 0.7          # 音量, 0~1
+  autoplay: false      # 自动播放
+ ```
+
+own代表是否使用自己的music.js，如果设为true，就必须填写path参数，代表music.js位置，而且下面的color, mode, server, type, id, volume, autoplay等参数将被忽略；如果设为false，代表使用在线歌单，path将会被忽略，其他参数参见注释。
+
+这里安利一下我自己的[music.js生成器](https://github.com/GaisaiYuno/missevan-spider)
 
 ### temp文件夹
 
