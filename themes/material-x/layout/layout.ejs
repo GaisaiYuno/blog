@@ -91,7 +91,7 @@
 	}
 	function LoadWpac(){
 		wpac_init = window.wpac_init || [];
-		wpac_init.push({widget: 'Rating', id: 21085});//渲染widget pack（点赞系统）
+		wpac_init.push({widget: 'Rating', id: <%= theme.widget_pack.id %>});//渲染widget pack（点赞系统）
 		WIDGETPACK_LOADED=false;
 		(function() {
 			WIDGETPACK_LOADED = true;
@@ -112,9 +112,13 @@
 		$(".loading").css("display", "none");
 		LoadMathJax();
 		LoadHitoKoto();
-		LoadWpac();
+		<% if(theme.widget_pack.enable != false) {%>
+			LoadWpac();
+		<% } %>
 		LoadFancybox();
-		LoadGitalk();
+		<% if(theme.gitalk.enable != false) {%>
+			LoadGitalk();
+		<% } %>
    });
   </script>
 
@@ -138,14 +142,16 @@
 			fixed=true
 			color="<%= theme.music.color %>"
 			mode="<%= theme.music.mode %>"
-			autoplay=<%= theme.music.autoplay %>
+			autoplay=<%= theme.music.autoplay == false ? true:false %>
 			volume=<%= theme.music.volume %>
 		>
 		</meting-js>
 	<% } %>
   <% } %>
   <script>
-	get_latest_comments("<%= theme.repo %>");
+	  <% if(theme.latest_comments.enable != false){ %>
+		  get_latest_comments("<%= theme.repo %>");
+	  <% } %>
   </script>
 </body>
 </html>

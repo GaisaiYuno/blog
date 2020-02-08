@@ -25,21 +25,23 @@ nodewaves: true
 # 开启了no-referrer，就不能用不蒜子统计了
 fastclick: true
 
-
+widget_pack:
+  enable: true
+  id: 21085
 
 ############################### 默认值 ###############################
 # 音乐控件的默认配置，如果sidebar或者page里没有提供，就取这里的参数
 music:
-  enable: true        # 是否启用
-  own: false            # 是否使用自己的music.js
-  path: /dist/music.js # 使用在线歌单，这里不填
+  enable: true         # 是否启用
+  own: false           # 是否使用自己的music.js
+  path: /js/music.js   # 使用在线歌单，这里不填
   color: '#1BCDFC'     # 主题色
   mode: circulation    # random （随机） single （单曲） circulation （列表循环） order （列表）
   server: netease      # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
   type: playlist       # song （单曲） album （专辑） playlist （歌单） search （搜索）
   id: 2482575335       # 歌曲/专辑/歌单 ID
   volume: 0.7          # 音量, 0~1
-  autoplay: 0      # 自动播放
+  autoplay: false          # 自动播放
 
 # 友链页头像占位图因为使用pjax，被我阉割掉了
 
@@ -135,7 +137,9 @@ meta:
 # 主体元素，你也可以在页面的Front-matter中设置
 body: [article, comments]
 
-repo: gaisaiyuno/gaisaiyuno.github.io # 您的repo地址（最新评论用）
+latest_comments:
+  enable: true
+  repo: gaisaiyuno/gaisaiyuno.github.io # 您的repo地址（最新评论用）
 
 # 侧边栏小部件，默认按下面给定的顺序全部显示，文章中还可以自定义显示一部分以及顺序
 sidebar:
@@ -169,10 +173,9 @@ sidebar:
       rel: nofollow
 
   - widget: tagcloud
-    #icon: fas fa-code
-  
+	#icon: fas fa-code
+	
   # - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
-
   - widget: hitokoto
 
   - widget: latest_comments
@@ -194,21 +197,21 @@ social:
 # 分享按钮
 # 当id为qrcode时需要安装插件  npm i -S hexo-helper-qrcode
 share:
-	- id: qq
-	  name: QQ好友
-	  img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png
-	- id: qzone
-	  name: QQ空间
-	  img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png
-	# - id: qrcode
-	#   name: 微信
-	#   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png
-	- id: weibo
-	  name: 微博
-	  img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png
-	# - id: qrcode
-	#   name: QRcode
-	#   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png
+  - id: qq
+    name: QQ好友
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png
+  - id: qzone
+    name: QQ空间
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png
+# - id: qrcode
+#   name: 微信
+#   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png
+  - id: weibo
+    name: 微博
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png
+# - id: qrcode
+#   name: QRcode
+#   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png
 
 
 

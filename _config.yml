@@ -78,7 +78,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-material-x-master
+theme: material-x
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -95,6 +95,7 @@ baidusitemap:
 
 #gitalk自行配置
 gitalk:
+  enable: true
   clientID: 11a743f6f22948aec581  # Github Application Client ID
   clientSecret: 792183868cbc5db2d4b89dbb15450b83fc3880a8 # Github Application Client Secret
   repo: gaisaiyuno.github.io # Repository name to store issues
