@@ -118,12 +118,31 @@
    });
   </script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" rel="noreferrer">
-<div id="aplayer"></div>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js" rel="noreferrer"></script>
-  <script type="text/javascript" src="/dist/music.js" rel="noreferrer"></script>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+  <% if(theme.music && theme.music.enable != false){ %>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" rel="noreferrer">
+	<% if(theme.music.own != false){ %>
+		<div id="aplayer"></div>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js" rel="noreferrer"></script>
+			<script type="text/javascript" src="<%= theme.music.path %>" rel="noreferrer"></script>
+		</div>
+	<% } else {%>
+		<!-- require APlayer -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+		<!-- require MetingJS -->
+		<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+		<meting-js
+			server="<%= theme.music.server %>"
+			type="<%= theme.music.type %>"
+			id="<%= theme.music.id %>"
+			fixed=true
+			color="<%= theme.music.color %>"
+			mode="<%= theme.music.mode %>"
+			autoplay=<%= theme.music.autoplay %>
+			volume=<%= theme.music.volume %>
+		>
+		</meting-js>
+	<% } %>
+  <% } %>
 </body>
-
 </html>

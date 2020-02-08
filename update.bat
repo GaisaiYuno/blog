@@ -1,2 +1,2 @@
-hexo clean && hexo g && xcopy D:\HexoBlog\blog\temp\*.* D:\HexoBlog\blog\public\ /s && hexo d
+hexo clean && hexo g && xcopy \temp\*.* \public\ /s && hexo d
 PAUSE
