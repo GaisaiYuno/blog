@@ -31,7 +31,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
  - 404.html
- - google8ff10352272a251b.html
+ - google8ff10352272a251b.html #这里是谷歌的认证文件，如果需要，请自行下载
  
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -93,14 +93,14 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
-
+#gitalk自行配置
 gitalk:
   clientID: 11a743f6f22948aec581  # Github Application Client ID
   clientSecret: 792183868cbc5db2d4b89dbb15450b83fc3880a8 # Github Application Client Secret
   repo: gaisaiyuno.github.io # Repository name to store issues
-  accessToken: 36159b9ee938e02ee4f766fb299f885b4e477dd7 #Read-only Access
+  accessToken: 36159b9ee938e02ee4f766fb299f885b4e477dd7 #Read-only Access （重要，防止github疯狂给你发邮件，详细自行百度）
   owner: GaisaiYuno
-  admin: [GaisaiYuno] 
+  admin: [GaisaiYuno]
   language: zh-CN
   # GitHub repo owner and collaborators, only these guys can initialize github issues
   # Gitalk's display language depends on user's browser or system environment
