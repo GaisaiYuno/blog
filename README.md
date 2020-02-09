@@ -104,3 +104,11 @@ own代表是否使用自己的music.js，如果设为true，就必须填写path�
 
 - update_without_cleaning.bat：不clean，直接上传。
 
+## 下载
+
+因为主题里面BZOJ离线题库较大，国内建议到[镜像源Gitee](https://gitee.com/steven_meng/blog)下载，或者
+
+```bash
+git clone https://gitee.com/steven_meng/blog.git
+```
+
