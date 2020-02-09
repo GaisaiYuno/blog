@@ -65,6 +65,7 @@ cover:
   # logo: assets/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
   # search_placeholder: '搜索'
   # 主页封面菜单
+  
   features:
     - name: 主页
       icon: fas fa-home
@@ -148,6 +149,11 @@ sidebar:
     social: true
   
   - widget: toc
+
+  - widget: plain
+    icon: fas fa-bullhorn
+    title: 公告
+    body: '[博客源代码](https://github.com/GaisaiYuno/blog)已经公开，如果访问缓慢，可以到[镜像网站](https://steven_meng.gitee.io/)。'
 
   - widget: grid
     icon: fas fa-map-signs
