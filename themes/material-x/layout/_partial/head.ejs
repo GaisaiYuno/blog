@@ -102,6 +102,20 @@
       })
   </script>
 
+  <script>
+    fetch('https://api.konnyaku.monster/v1/getip/getip.js')
+      .then(function (res){
+        return res.json();
+      })
+      .then(function (data) {
+        var h_from = document.getElementById('ip');
+        h_from.innerText = "您的IP：" + data.clientIP; 
+      })
+      .catch(function (err) {
+        console.error(err);
+      })
+  </script>
+
   	<!-- Global site tag (gtag.js) - Google Analytics -->
   	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150421519-2"></script>
   	<script>

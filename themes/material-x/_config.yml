@@ -179,6 +179,8 @@ sidebar:
       rel: nofollow
 
   - widget: tagcloud
+
+  - widget: ip
 	
   - widget: latest_comments
 
