@@ -57,3 +57,4 @@ env:
     global:
         # Github Pages
         - GH_REF: github.com/GaisaiYuno/gaisaiyuno.github.io
+        - GT_REF: gitee.com/steven_meng/steven_meng

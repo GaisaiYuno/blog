@@ -87,7 +87,7 @@ links:
       - 巨佬
     - name: 三级的蒟蒻的博客
       avatar: https://s2.ax1x.com/2019/07/22/eiffxI.png
-      url: https://konnyaku.monster/
+      url: https://blog.konnyaku.monster/
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
