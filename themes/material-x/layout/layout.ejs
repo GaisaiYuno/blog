@@ -102,6 +102,19 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
 		})();
 	}
+	function LoadIP(){
+		fetch('https://api.konnyaku.monster/v1/getip/getip.js')
+      .then(function (res){
+        return res.json();
+      })
+      .then(function (data) {
+        var h_from = document.getElementById('ip');
+        h_from.innerText = "您的IP：" + data.clientIP; 
+      })
+      .catch(function (err) {
+        console.error(err);
+      })
+	}
     // 开始 PJAX 执行的函数
     document.addEventListener('pjax:send', function (){
 		$(".loading").css("display", "block");//加载转圈圈的css
@@ -119,6 +132,7 @@
 		<% if(theme.gitalk.enable != false) {%>
 			LoadGitalk();
 		<% } %>
+		LoadIP();
    });
   </script>
 
