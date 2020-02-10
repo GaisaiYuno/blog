@@ -34,12 +34,20 @@ after_script:
   - find ./ -type f -name '*.html'|xargs sed -i "s#<em>#_#g"
   - find ./ -type f -name '*.html'|xargs sed -i "s#</em>#_#g"
   - cd ..
+  
   - git init
   - git config user.name "GaisaiYuno"
   - git config user.email "steven_mhy@outlook.com"
   - git add .
-  - git commit -m "Update blog content by Travis CI"
+  - git commit -m "Update blog content by Travis CI to Github"
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+  
+  - git init
+  - git config user.name "Steven_Meng"
+  - git config user.email "steven_mhy@outlook.com"
+  - git add .
+  - git commit -m "Update blog content by Travis CI to Gitee"
+  - git push --force --quiet "https://${GT_TOKEN}@${GT_REF}" master:master
 
 branches:
     only:
