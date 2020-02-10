@@ -30,6 +30,10 @@ script:
 after_script:
   - cp -r ./temp/. ./public/
   - cd ./public
+  - cd archives
+  - find ./ -name "*.html" -exec grep "<em>" {} \; -exec sed -i 's/<em>/*/g' {} \;
+  - find ./ -name "*.html" -exec grep "</em>" {} \; -exec sed -i 's/<em>/*/g' {} \;
+  - cd ..
   - git init
   - git config user.name "GaisaiYuno"
   - git config user.email "steven_mhy@outlook.com"
