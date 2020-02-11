@@ -59,6 +59,7 @@
 				})
 		}
 		function LoadGitalk() {
+			console.log("loading gitalk");
 			$.getScript("/js/gitalk.js", function () {
 				var gitalk = new Gitalk({
 					clientID: '<%= theme.gitalk.clientID %>',
@@ -72,21 +73,25 @@
 					distractionFreeMode: '<%= theme.gitalk.distraction_free_mode %>'
 				});
 				gitalk.render('gitalk-container');
+				console.log("render complete!!!");
 			});
 		}
 		function LoadMathJax() {
+			console.log("rendering katex");
+			console.log(document.body);
 			// $.getScript("https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js", function () {//渲染mathjax
 			// 	$.getScript("https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js", function () {
-					renderMathInElement(document.body,
-						{
-							delimiters: [
-								{ left: "$$", right: "$$", display: true },
-								{ left: "$", right: "$", display: false }
-							]
-						}
-					);
+			renderMathInElement(document.body,
+				{
+					delimiters: [
+						{ left: "$$", right: "$$", display: true },
+						{ left: "$", right: "$", display: false }
+					]
+				}
+			);
 			// 	});
 			// });
+
 		}
 		function LoadFancybox() {
 			$(".article-entry").find("img").each(function () {//渲染fancy box
@@ -130,7 +135,6 @@
 		// PJAX 完成之后执行的函数，可以和上面的重载放在一起
 		document.addEventListener('pjax:complete', function () {
 			$(".loading").css("display", "none");
-			//LoadMathJax();
 			LoadHitoKoto();
 		<% if (theme.widget_pack.enable != false) {%>
 				LoadWpac();
@@ -139,7 +143,8 @@
 		<% if (theme.gitalk.enable != false) {%>
 				LoadGitalk();
 		<% } %>
-				LoadIP();
+				LoadMathJax();
+			LoadIP();
 		});
 	</script>
 
@@ -168,6 +173,22 @@
 			get_latest_comments("<%= theme.latest_comments.repo %>");
 	  <% } %>
 	</script>
+
 </body>
+<script>
+		function renderMath() {
+			console.log("rendering katex");
+			renderMathInElement(document.body,
+				{
+					delimiters: [
+						{ left: "$$", right: "$$", display: true },
+						{ left: "$", right: "$", display: false },
+					]
+				}
+			);
+		}
+</script>
+
+<body onload="renderMath()">
 
 </html>
