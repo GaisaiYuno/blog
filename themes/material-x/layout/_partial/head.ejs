@@ -14,19 +14,19 @@
 		integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH"
 		crossorigin="anonymous"></script>
 	<%
-    var title = page.title;
-    if (is_archive()) {
-      title = 'Archives';
-      if (is_month())
-        title += ': ' + page.year + '/' + page.month;
-      else if (is_year())
-        title += ': ' + page.year;
-    }
-    else if (is_category())
-      title = 'Category: ' + page.category;
-    else if (is_tag())
-      title = 'Tag: ' + page.tag;
-  %>
+		var title = page.title;
+		if (is_archive()) {
+		title = 'Archives';
+		if (is_month())
+			title += ': ' + page.year + '/' + page.month;
+		else if (is_year())
+			title += ': ' + page.year;
+		}
+		else if (is_category())
+		title = 'Category: ' + page.category;
+		else if (is_tag())
+		title = 'Tag: ' + page.tag;
+	%>
 	<title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
 	<% if (page.keywords && config.keywords){ %>
 	<meta name="keywords" content="<%- page.keywords %>, <%- config.keywords %>">
@@ -126,36 +126,28 @@
 			})
 	</script>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150421519-2"></script>
-	<script>
+	<% if (theme.search_engine.google_analytics_key) { %> 
+		<!-- 原主题找不到这一项的值，只好自己魔改一下 -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=<%- config.google_analytics_key %>"></script>
+		<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'UA-150421519-2');
-	</script>
-
-	<% if (false) { %>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=<%- config.google_analytics_key %>"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
+		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 		gtag('config', '<%- config.google_analytics_key %>');
-	</script>
+		</script>
 	<% } %>
-	<% if (false) { %>
-	<!-- ba -->
-	<script>
+	<% if (theme.search_engine.baidu_analytics_key) { %>
+		<!-- ba -->
+		<script>
 		var _hmt = _hmt || [];
-		(function () {
-			var hm = document.createElement("script");
-			hm.src = "https://hm.baidu.com/hm.js?<%= config.baidu_analytics_key %>";
-			var s = document.getElementsByTagName("script")[0];
-			s.parentNode.insertBefore(hm, s);
+		(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?<%= config.baidu_analytics_key %>";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
 		})();
-	</script>
+		</script>
 	<% } %>
 
 </head>

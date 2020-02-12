@@ -15,6 +15,10 @@ info:
 style: pure        # pure: 导航栏和标题栏背景是白色
 url: http://stevenmhy.tk
 
+search_engine:
+  google_analytics_key: UA-150421519-2
+  baidu_analytics_key: 
+
 
 ############################### 服务开关 ###############################
 scrollreveal: false
