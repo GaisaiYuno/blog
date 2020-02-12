@@ -19,11 +19,12 @@ search_engine:
   google_analytics_key: UA-150421519-2
   baidu_analytics_key: 
 
+no_referrer: false #有时博客使用的音频，图片等等加载不出来，是因为别人开了防盗链，使用no_referrer就可以加载出来
 
 ############################### 服务开关 ###############################
 scrollreveal: false
 nodewaves: true
-# busuanzi: true
+busuanzi: true
 # 开启了no-referrer，就不能用不蒜子统计了
 fastclick: true
 

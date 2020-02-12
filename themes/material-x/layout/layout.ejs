@@ -127,6 +127,11 @@
 					console.error(err);
 				})
 		}
+		function LoadBusuanzi(){
+			$.getScript("https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js", function () {
+
+			});
+		}
 		// 开始 PJAX 执行的函数
 		document.addEventListener('pjax:send', function () {
 			$(".loading").css("display", "block");//加载转圈圈的css
@@ -145,6 +150,9 @@
 		<% } %>
 				LoadMathJax();
 			LoadIP();
+		<% if (theme.busuanzi != false) {%>
+				LoadBusuanzi();
+		<% } %>
 		});
 	</script>
 
