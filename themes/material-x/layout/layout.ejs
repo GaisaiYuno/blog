@@ -59,28 +59,20 @@
 				})
 		}
 		function LoadGitalk() {
-			console.log("loading gitalk");
-			// $.getScript("/js/gitalk.js", function () {
-				var gitalk = new Gitalk({
-					clientID: '<%= theme.gitalk.clientID %>',
-					clientSecret: '<%= theme.gitalk.clientSecret %>',
-					accessToken: '<%= theme.gitalk.accessToken %>',
-					repo: '<%= theme.gitalk.repo %>',
-					owner: '<%= theme.gitalk.owner %>',
-					admin: ['<%= theme.gitalk.admin %>'],
-					id: location.pathname,
-					language: '<%= theme.gitalk.language %>',
-					distractionFreeMode: '<%= theme.gitalk.distraction_free_mode %>'
-				});
-				gitalk.render('gitalk-container');
-				console.log("render complete!!!");
-			// });
+			var gitalk = new Gitalk({
+				clientID: '<%= theme.gitalk.clientID %>',
+				clientSecret: '<%= theme.gitalk.clientSecret %>',
+				accessToken: '<%= theme.gitalk.accessToken %>',
+				repo: '<%= theme.gitalk.repo %>',
+				owner: '<%= theme.gitalk.owner %>',
+				admin: ['<%= theme.gitalk.admin %>'],
+				id: location.pathname,
+				language: '<%= theme.gitalk.language %>',
+				distractionFreeMode: '<%= theme.gitalk.distraction_free_mode %>'
+			});
+			gitalk.render('gitalk-container');
 		}
-		function LoadMathJax() {
-			console.log("rendering katex");
-			// $.getScript("https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js", function () {//渲染mathjax
-			// 	$.getScript("https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js", function () {
-			renderMathInElement(document.body,
+		function LoadMathJax() {renderMathInElement(document.body,
 				{
 					delimiters: [
 						{ left: "$$", right: "$$", display: true },
@@ -88,8 +80,6 @@
 					]
 				}
 			);
-			// 	});
-			// });
 
 		}
 		function LoadFancybox() {
@@ -201,22 +191,5 @@
 			get_latest_comments("<%= theme.latest_comments.repo %>");
 	  <% } %>
 	</script>
-
 </body>
-<script>
-		function renderMath() {
-			console.log("rendering katex");
-			renderMathInElement(document.body,
-				{
-					delimiters: [
-						{ left: "$$", right: "$$", display: true },
-						{ left: "$", right: "$", display: false },
-					]
-				}
-			);
-		}
-</script>
-
-<body onload="renderMath()">
-
 </html>

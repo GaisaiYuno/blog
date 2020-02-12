@@ -15,6 +15,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
 		integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH"
 		crossorigin="anonymous"></script>
+
 	<%
 		var title = page.title;
 		if (is_archive()) {
@@ -61,6 +62,7 @@
 	<div class="loading">
 		<div id="loader"></div>
 	</div>
+
 	<!-- link -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<% if (theme.nodewaves == true) { %>
@@ -90,8 +92,10 @@
 	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
-	<script src="/js/gitalk.js"></script>
-	<!-- <script src="https://embed.widgetpack.com/widget.js"></script> -->
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>  
+
 	<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/global-hot-data.js"></script>
