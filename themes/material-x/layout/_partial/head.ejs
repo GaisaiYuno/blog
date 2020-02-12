@@ -90,6 +90,8 @@
 	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+	<script src="/js/gitalk.js"></script>
+	<!-- <script src="https://embed.widgetpack.com/widget.js"></script> -->
 	<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/global-hot-data.js"></script>
@@ -131,12 +133,12 @@
 	<% if (theme.search_engine.google_analytics_key) { %> 
 		<!-- 原主题找不到这一项的值，只好自己魔改一下 -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=<%- config.google_analytics_key %>"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.search_engine.google_analytics_key %>"></script>
 		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', '<%- config.google_analytics_key %>');
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', '<%- theme.search_engine.google_analytics_key %>');
 		</script>
 	<% } %>
 	<% if (theme.search_engine.baidu_analytics_key) { %>
@@ -145,7 +147,7 @@
 		var _hmt = _hmt || [];
 		(function() {
 		var hm = document.createElement("script");
-		hm.src = "https://hm.baidu.com/hm.js?<%= config.baidu_analytics_key %>";
+		hm.src = "https://hm.baidu.com/hm.js?<%= theme.search_engine.baidu_analytics_key %>";
 		var s = document.getElementsByTagName("script")[0];
 		s.parentNode.insertBefore(hm, s);
 		})();

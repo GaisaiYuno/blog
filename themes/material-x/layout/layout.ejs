@@ -60,7 +60,7 @@
 		}
 		function LoadGitalk() {
 			console.log("loading gitalk");
-			$.getScript("/js/gitalk.js", function () {
+			// $.getScript("/js/gitalk.js", function () {
 				var gitalk = new Gitalk({
 					clientID: '<%= theme.gitalk.clientID %>',
 					clientSecret: '<%= theme.gitalk.clientSecret %>',
@@ -74,11 +74,10 @@
 				});
 				gitalk.render('gitalk-container');
 				console.log("render complete!!!");
-			});
+			// });
 		}
 		function LoadMathJax() {
 			console.log("rendering katex");
-			console.log(document.body);
 			// $.getScript("https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js", function () {//渲染mathjax
 			// 	$.getScript("https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js", function () {
 			renderMathInElement(document.body,
@@ -128,9 +127,24 @@
 				})
 		}
 		function LoadBusuanzi(){
-			$.getScript("https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js", function () {
-
+			$.getScript("https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js", function () {});
+		}
+		function LoadGoogleAnalytics(){
+			$.getScript("https://www.googletagmanager.com/gtag/js?id=<%- theme.search_engine.google_analytics_key %>",function(){
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', '<%- theme.search_engine.google_analytics_key %>');
 			});
+		}
+		function LoadBaiduAnalytics(){
+			var _hmt = _hmt || [];
+			(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?<%= theme.search_engine.baidu_analytics_key %>";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+			})();
 		}
 		// 开始 PJAX 执行的函数
 		document.addEventListener('pjax:send', function () {
@@ -142,16 +156,22 @@
 			$(".loading").css("display", "none");
 			LoadHitoKoto();
 		<% if (theme.widget_pack.enable != false) {%>
-				LoadWpac();
+			LoadWpac();
 		<% } %>
-				LoadFancybox();
+			LoadFancybox();
 		<% if (theme.gitalk.enable != false) {%>
-				LoadGitalk();
+			LoadGitalk();
 		<% } %>
-				LoadMathJax();
+			LoadMathJax();
 			LoadIP();
 		<% if (theme.busuanzi != false) {%>
-				LoadBusuanzi();
+			LoadBusuanzi();
+		<% } %>
+		<% if (theme.search_engine.google_analytics_key) { %> 
+			LoadGoogleAnalytics();
+		<% } %>
+		<% if (theme.search_engine.baidu_analytics_key) { %>
+			LoadBaiduAnalytics();
 		<% } %>
 		});
 	</script>
