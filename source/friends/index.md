@@ -2,7 +2,7 @@
 layout: links
 title: 我的朋友们
 links:
-  - group: 同年级OIer
+  - group: 同年级巨佬OIer
     icon: fas fa-user-tie
     items:
     - name: ypy
@@ -11,7 +11,6 @@ links:
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
       - 白学
 
     - name: zyd
@@ -20,7 +19,6 @@ links:
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
       - 珂学
 
     - name: ygy
@@ -29,7 +27,7 @@ links:
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
+      - 东方
 
     - name: ljz
       avatar: https://cdn.v2ex.com/gravatar/76239a736154bb86aa9f339c4eb3cad0
@@ -37,7 +35,7 @@ links:
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
+      - 貌似喜欢FSN 
 
   - group: 学长
     icon: fas fa-user-tie
@@ -48,15 +46,14 @@ links:
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
+      - 茵蒂克丝
 
     - name: zjy
-      avatar: https://avatar.csdn.net/6/9/C/3_weixin_41519550.jpg
+      avatar: https://cdn.jsdelivr.net/gh/GaisaiYuno/imghost/3_weixin_41519550.png
       url: https://blog.csdn.net/weixin_41519550
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
       - AFO
 
     - name: zzc
@@ -64,19 +61,18 @@ links:
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
       - AFO
 
-  - group: 其他OIer
+  - group: 其他巨佬OIer
     icon: fas fa-user-tie
     items:
     - name: wxwoo
-      avatar: https://cdn.luogu.org/upload/usericon/116659.png
+      avatar: https://cdn.jsdelivr.net/gh/GaisaiYuno/imghost/116659.jpg
       url: https://wxwoo.top/
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
+      - OI
     - name: MicDZ
       avatar: https://www.micdz.cn/img/h.png
       url: https://www.micdz.cn/
@@ -84,28 +80,26 @@ links:
       textColor: '#667086'
       tags:
       - OIER
-      - 巨佬
     - name: 三级的蒟蒻的博客
       avatar: https://s2.ax1x.com/2019/07/22/eiffxI.png
       url: https://blog.konnyaku.monster/
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
+      - 喜欢小埋
     - name: memset0
-      avatar: https://cdn.luogu.org/upload/usericon/53495.png
+      avatar: https://cdn.v2ex.com/gravatar/f06d64b4dc6a92b3d79aea541b84fa20?s=1000&d=mm
       url: https://memset0.cn/
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
+      - 洛谷管理
     - name: ctz
       avatar: https://cdn.jsdelivr.net/gh/ctz45562/cdn@1.4.1/avatar.jpg
       url: https://ctz45562.github.io
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
       - OIer
       - 二次元
     - name: RiverFun
@@ -114,7 +108,7 @@ links:
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 巨佬
+      - 貌似喜欢纱路
   - group: 技术大佬
     icon: fas fa-user-tie
     items:
@@ -174,12 +168,20 @@ links:
       tags:
       - Python
       - 爬虫
+    - name: Metthew’s blog
+      avatar: https://s2.ax1x.com/2020/02/02/1YPnhR.jpg
+      url: https://raycoder.me/
+      backgroundColor: '#fff'
+      textColor: '#667086'
+      tags:
+      - 技术
+      - 分享
 ---
 
 欢迎各位交换友链！
 必须有名称、blog链接和头像链接！
 
 > 名称： Steven_MengのBlog
-> 头像： https://gitee.com/steven_meng/kon/raw/master/head.png
+> 头像： https://cdn.jsdelivr.net/gh/GaisaiYuno/imghost/20200124153036.PNG
 > 网址： https://gaisaiyuno.github.io
 > 标签： 蒟蒻，二次元
