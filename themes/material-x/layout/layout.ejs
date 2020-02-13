@@ -41,7 +41,9 @@
 				"title",
 				".l_body",
 				"cover-wrapper",
-			]
+			],
+			cache: true,
+  			cacheBust: false
 		})
 		function LoadHitoKoto() {
 			fetch('https://v1.hitokoto.cn/?c=a')//加载一言
@@ -140,7 +142,6 @@
 		document.addEventListener('pjax:send', function () {
 			$(".loading").css("display", "block");//加载转圈圈的css
 		});
-
 		// PJAX 完成之后执行的函数，可以和上面的重载放在一起
 		document.addEventListener('pjax:complete', function () {
 			$(".loading").css("display", "none");
