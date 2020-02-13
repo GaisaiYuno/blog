@@ -59,7 +59,7 @@ backstretch:
   duration: 6000 # 持续时间（毫秒）
   fade: 2500     # 渐变（毫秒）
   images:
-    - https://cdn.jsdelivr.net/gh/GaisaiYuno/imghost/%E4%B8%8B%E8%BD%BD.jpg
+    - https://cdn.jsdelivr.net/gh/GaisaiYuno/imghost/background.jpg
 
 ############################### 自定义 ###############################
 # page的封面
