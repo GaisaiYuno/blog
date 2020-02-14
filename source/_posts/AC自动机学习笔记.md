@@ -144,7 +144,7 @@ int Query(char *s){
 }
 ```
 
-## 例题 2
+### 例题 2
 
 给你 $n$ 个模式串和一个文本串，问每个模式串在文本串里面的出现次数。
 
@@ -184,7 +184,7 @@ for (int i=1;i<=n;++i){
 }
 ```
 
-## 例题 3
+### 例题 3
 
 [P2444 [POI2000]病毒](https://www.luogu.com.cn/problem/P2444)
 
@@ -217,11 +217,11 @@ void BuildFail(){
 下面，我们只需要一个简单的 dfs 就能解决问题：
 
 ```cpp
-int fd=false;
+int fd=false,vis[MAXN],stk[MAXN];
 void dfs(int u){
 	if (fd) return ;
-	if (stk[u]) return fd=true,void();
-	if (ed[u]||vis[u]) return ;
+	if (stk[u]) return fd=true,void();//走到了之前经过的节点，找到了环
+	if (ed[u]||vis[u]) return ;//不能走到标记过的节点，也不能重复经过节点
 	vis[u]=true;
 	stk[u]=true;
 	dfs(trie[u][0]),dfs(trie[u][1]);
@@ -230,8 +230,4 @@ void dfs(int u){
 
 puts(fd?"TAK":"NIE");
 ```
-
-
-
-
 
