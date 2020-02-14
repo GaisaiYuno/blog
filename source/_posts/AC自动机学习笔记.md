@@ -190,6 +190,47 @@ for (int i=1;i<=n;++i){
 
 我们可以发现如果这些 01 字符串组成的 AC 自动机有环，那么就存在无限的字符集 $\sum$ ，使得输入这些字符，永远不会达到终止状态，满足题目要求。
 
+那么问题就变成找到这个环，而且避开终止状态。
+
+首先，我们要标记出所有的终止状态，注意到终止状态不仅仅包括 Trie 树上的终止节点，也包含了这些节点在 fail 树上的子节点：
+
+```cpp
+void BuildFail(){
+    queue<int>Q;
+    for (int i=0;i<2;++i) if (trie[0][i]) Q.push(trie[0][i]);
+    while (Q.size()){
+        int now=Q.front();Q.pop();
+        for (int i=0;i<2;++i){
+            if (trie[now][i]){
+                fail[trie[now][i]]=trie[fail[now]][i];
+                ed[trie[now][i]]|=ed[fail[trie[now][i]]];//标记子节点
+                Q.push(trie[now][i]);
+            }
+            else {
+                trie[now][i]=trie[fail[now]][i];
+            }
+        }
+    }
+}
+```
+
+下面，我们只需要一个简单的 dfs 就能解决问题：
+
+```cpp
+int fd=false;
+void dfs(int u){
+	if (fd) return ;
+	if (stk[u]) return fd=true,void();
+	if (ed[u]||vis[u]) return ;
+	vis[u]=true;
+	stk[u]=true;
+	dfs(trie[u][0]),dfs(trie[u][1]);
+	stk[u]=false;
+}
+
+puts(fd?"TAK":"NIE");
+```
+
 
 
 
