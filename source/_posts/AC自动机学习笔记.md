@@ -110,9 +110,9 @@ void BuildFail(){
 
 ### 例题 1
 
-给你 $n$ 个模式串和一个文本串，问**多少个**模式串在文本串里面出现过。
+给你 $n$ 个模式串和一个文本串，问**多少个**模式串在文本串里面出现过（重复不算）。
 
-我们在插入的时候，标记这个节点有多少次作为终止节点：
+我们在插入的时候，标记这个节点有多少次作为终止节点（ed 数组）：
 
 ```cpp
 void Insert(int id,char *s){
@@ -122,7 +122,75 @@ void Insert(int id,char *s){
         if (!trie[root][c]) trie[root][c]=++tot;
         root=trie[root][c];
     }
-    ed[root]++;
+    ed[root]++,pos[id]=root;
 }
 ```
+
+再来看一下 Query ，我们依次把 s 所含的字符塞进 AC 自动机，每塞进一个字符，发现 fail 链上的所有节点都可能对答案做出贡献，那么我们暴力跳 fail 链即可。
+
+```cpp
+int Query(char *s){
+    int len=strlen(s),root=0,ans=0;
+    for (int i=0;i<len;++i){
+        int c=s[i]-'a';
+        root=trie[root][c];
+        for (int j=root;ed[j]!=-1;j=fail[j]){
+            //注意相同只计算一次
+            //只要一个前缀已经被重复计算，后面的肯定被重复计算
+            ans+=ed[j],ed[j]=-1;
+        }
+    }
+    return ans;
+}
+```
+
+## 例题 2
+
+给你 $n$ 个模式串和一个文本串，问每个模式串在文本串里面的出现次数。
+
+还是上述的思路，我们考虑如何快速算出 Query 的值。
+
+定义 fail 树是把 AC 自动机里面的边 $(u,fail(u))$ 抽出来，形成的一棵树。
+
+那么给节点 $u$ 加上 $x$ ，对 fail 树里面 $u$ 的子树中的每个节点都有贡献。
+
+那么我们就可以这样写：
+
+```cpp
+vector<int>G[MAXN];
+void AddEdge(int u,int v){
+	G[u].push_back(v);
+}
+void dfs(int u){
+	for (int i=0;i<G[u].size();++i){
+		int v=G[u][i];
+		dfs(v);
+		sz[u]+=sz[v];
+	}
+}
+
+int len=strlen(s),root=0;
+for (int i=0;i<len;++i){
+	int c=s[i]-'a';
+	root=trie[root][c];
+	sz[root]++;
+}
+for (int i=2;i<=tot;++i){
+    AddEdge(fail[i],i);
+}
+dfs(0);
+for (int i=1;i<=n;++i){
+    printf("%d\n",sz[pos[i]]);
+}
+```
+
+## 例题 3
+
+[P2444 [POI2000]病毒](https://www.luogu.com.cn/problem/P2444)
+
+我们可以发现如果这些 01 字符串组成的 AC 自动机有环，那么就存在无限的字符集 $\sum$ ，使得输入这些字符，永远不会达到终止状态，满足题目要求。
+
+
+
+
 
