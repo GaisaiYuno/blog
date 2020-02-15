@@ -21,6 +21,17 @@ search_engine:
 
 no_referrer: false #有时博客使用的音频，图片等等加载不出来，是因为别人开了防盗链，使用no_referrer就可以加载出来
 
+# binft:
+#   - say: 我太蒻了
+#   - say: zyd太巨了
+#   - say: ypy太巨了
+#   - say: ygy太巨了
+#   - say: yxc太巨了
+#   - say: zhh太巨了
+#   - say: ljz太巨了
+
+#打字机效果
+
 ############################### 服务开关 ###############################
 scrollreveal: false
 nodewaves: true
@@ -83,21 +94,10 @@ cover:
       icon: fas fa-info-circle
       url: about/
       rel: nofollow
-    - name: 2048游戏
-      icon: fas fa-th
-      url: 2048-master/
-      rel: nofollow
-    - name: BZOJ离线题库
-      icon: fas fa-book
-      url: bzojch/
-      rel: nofollow
-    - name: Markdown在线编辑
-      icon: fas fa-edit
-      url: editor/
-      rel: nofollow
     - name: 留言板
       icon: fas fa-comment
       url: /message
+      rel: nofollow
     - name: 实验室
       icon: fas fa-fire
       url: lab/

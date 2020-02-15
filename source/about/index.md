@@ -9,13 +9,13 @@ date: 2019-03-13 18:25:18
 
 喜欢日系的歌曲（初中那会喜欢欧美风）
 
-现在主要搞C++，偶尔会写python，javascript，php，html之类的。
+现在主要搞 C++，偶尔会写 python，javascript，php，html之类的。
 
 喜欢随机化，数据结构，大暴力，乱搞。
 
 不喜欢单调队列，高精度，卡常题。
 
-买一个萌qwq​
+买一个萌 qwq​。
 
-![](/about/index/timg.jpg)
+![](https://cdn.jsdelivr.net/gh/GaisaiYuno/imghost/timg.jpg)
 

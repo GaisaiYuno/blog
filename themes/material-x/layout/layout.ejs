@@ -129,6 +129,9 @@
 				gtag('config', '<%- theme.search_engine.google_analytics_key %>');
 			});
 		}
+		function ActiveBar(){
+			$.getScript("https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.8/js/app.js",function(){});
+		}
 		function LoadBaiduAnalytics(){
 			var _hmt = _hmt || [];
 			(function() {
@@ -141,6 +144,7 @@
 		// 开始 PJAX 执行的函数
 		document.addEventListener('pjax:send', function () {
 			$(".loading").css("display", "block");//加载转圈圈的css
+			ActiveBar();
 		});
 		// PJAX 完成之后执行的函数，可以和上面的重载放在一起
 		document.addEventListener('pjax:complete', function () {
@@ -164,6 +168,7 @@
 		<% if (theme.search_engine.baidu_analytics_key) { %>
 			LoadBaiduAnalytics();
 		<% } %>
+			ActiveBar();
 		});
 	</script>
 

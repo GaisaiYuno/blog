@@ -20,5 +20,20 @@ links:
       url: /picture
       backgroundColor: '#fff'
       textColor: '#667086'
+    - name: Markdown编辑器
+      avatar: https://cdn.jsdelivr.net/gh/GaisaiYuno/imghost/editormd-logo-64x64.png
+      url: /editor
+      backgroundColor: '#fff'
+      textColor: '#667086'
+    - name: BZOJ题库
+      avatar: https://cdn.jsdelivr.net/gh/GaisaiYuno/imghost/UOJ.png
+      url: /bzojch
+      backgroundColor: '#fff'
+      textColor: '#667086'
+    - name: 2048游戏
+      avatar: https://cdn.jsdelivr.net/gh/GaisaiYuno/imghost/download.jpg
+      url: /2048-master
+      backgroundColor: '#fff'
+      textColor: '#667086'
 ---
 
