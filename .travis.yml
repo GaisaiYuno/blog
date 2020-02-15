@@ -23,6 +23,7 @@ before_install:
 
 install:
     - npm install
+    - echo 'KEY' >> $HOME/.ssh/known_hosts
 
 script:
     - hexo g
