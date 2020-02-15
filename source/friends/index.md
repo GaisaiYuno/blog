@@ -37,7 +37,7 @@ links:
       tags:
       - 貌似喜欢FSN 
 
-  - group: 学长
+  - group: 巨佬学长
     icon: fas fa-user-tie
     items:
     - name: lhx
@@ -62,7 +62,37 @@ links:
       textColor: '#667086'
       tags:
       - AFO
+  - group: 巨佬学弟
+    icon: fas fa-user-tie
+    items:
+    - name: lk
+      avatar: https://cdn.v2ex.com/gravatar/fe5000a4988d18bae6bb0f094a0d436b
+      url: http://akdream.tk/
+      backgroundColor: '#fff'
+      textColor: '#667086'
+      tags:
 
+    - name: wqt
+      avatar: https://cdn.v2ex.com/gravatar/22bc5b896dd014f085fb589d2b80ec57
+      url: https://www.cnblogs.com/WQT-FFT/
+      backgroundColor: '#fff'
+      textColor: '#667086'
+      tags:
+      
+    - name: jzc
+      avatar: https://cdn.v2ex.com/gravatar/9dfbb73b9cfe67b871eb38b26b29ec38
+      url: https://www.cnblogs.com/SZJZC/
+      backgroundColor: '#fff'
+      textColor: '#667086'
+      tags:
+      
+    - name: zqr
+      avatar: https://cdn.v2ex.com/gravatar/f8dec7b93740652d1b690447ec6e2078
+      url: https://www.cnblogs.com/THE-NAMELESS-SPECTRE/
+      backgroundColor: '#fff'
+      textColor: '#667086'
+      tags:
+      
   - group: 其他巨佬OIer
     icon: fas fa-user-tie
     items:
@@ -103,12 +133,12 @@ links:
       - OIer
       - 二次元
     - name: RiverFun
-      avatar: https://ae01.alicdn.com/kf/H8c2fb4f4cf2a456c9e3f17a896d0b8f2P.png
-      url:  https://stevebraveman.github.io/blog
+      avatar: https://stevebraveman.github.io/blog/img/avatar.jpg
+      url: https://stevebraveman.github.io/blog/
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
-      - 貌似喜欢纱路
+      - 喜欢纱路
   - group: 技术大佬
     icon: fas fa-user-tie
     items:
