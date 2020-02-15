@@ -106,7 +106,7 @@ void BuildFail(){
 }
 ```
 
-## AC 自动机的应用
+## AC 自动机的基础应用
 
 ### 例题 1
 
@@ -229,5 +229,203 @@ void dfs(int u){
 }
 
 puts(fd?"TAK":"NIE");
+```
+
+## AC 自动机的高级应用
+
+AC 自动机可以套上各种 dp ，立马就变得高级起来了。
+
+### 例题 4
+
+[P2292 [HNOI2004]L语言](https://www.luogu.com.cn/problem/P2292)
+
+设 $f[i]$ 代表 $s[1..i]$ 能不能通过 $D$ 表示出来。
+
+可以想到一个简单的 dp：$f[i]=\text{OR}_{j=1}^{n-1} (f[j] \text{ and } [s[j+1..i] \in D])$。
+
+现在问题是，我们能不能快速算出 $[s[j+1..i] \in D]$，可以想到从 $i$ 开始跳 fail 链，因为 $s[1..i]$ 的所有后缀都出现在 fail 链上。
+
+这样问题就迎刃而解了。
+
+```cpp
+//dep[i]代表节点的深度
+int f[MAXN];
+void Query(char *s){
+    int len=strlen(s),root=0;
+    for (int i=0;i<len;++i){
+        int pos=i+1;//pos是正确的下标
+        int c=s[i]-'a';
+        root=trie[root][c];
+        for (int j=root;j;j=fail[j]){
+            if (ed[j]&&f[pos-dep[j]]){
+                f[pos]=1;
+                break;
+            }
+        }
+    }
+}
+
+memset(f,0,sizeof(f));
+f[0]=1;
+scanf("%s",s);
+Query(s);
+int l=strlen(s);
+for (int i=l;i>=0;--i){
+    if (f[i]){
+        printf("%d\n",i);
+        break;
+    }
+}
+```
+
+### 例题 5
+
+[[JSOI2007]文本生成器](https://www.lydsy.com/JudgeOnline/show.php?id=1030)
+
+先解释一下样例，我们发现 [A-Z]A，[A-Z]B，A[A-Z]，B[A-Z]都是合法的，共 104 个，但是注意去除 AA，AB，BA，BB，这样就可以算出样例的 100 个了。
+
+我们可以从反面考虑，方法总数 $=26^m-$ 不合法的方法数。
+
+为什么呢？因为从反面考虑，我们只用避开例题 3 中我们标记过的节点即可，然而从正面考虑无从下手。
+
+递推式也是非常简单的，$dp(i,u)$ 代表输入到第 $i$ 个字符，避开所有标记过的节点，到达$u$的方案数。
+
+有：$dp(i,v)=\sum_{\delta(u,c)=v} dp(i-1,u) \quad (ed[v]=0)$。
+
+最后结果就是 $26^m-\sum dp(m,u)$。
+
+### 例题 6
+
+[[Noi2011]阿狸的打字机](https://www.lydsy.com/JudgeOnline/problem.php?id=2434)
+
+首先，我们想到 B 操作相当于在 Trie 上跳到父亲，小写字母操作代表进入子树，P 操作代表标记根节点，这样我们就可以 $O(n)$ 地把 Trie 建出来。
+
+毒瘤的在查询，考虑查询 $\text{Query}(x,y)$ ，假设把 $y$ 输入 AC 自动机，跳过的节点集合是 $S$ ，我们把 $x$ 在 Trie 上的结束节点记为 $v$ ，把 fail 树上 $v$ 的子树全部染色为 1 ，那么答案就是 $\sum _{u\in S} color(u)$ 。
+
+但是这样每次查询是 $O(n)$ 的，达不到要求。
+
+我们想到可以离线，对于同一个 $y$ ，$S$ 是固定的，那么就变成了 $S$ 中有多少节点在 $v$ 子树里面，这个可以树状数组 + dfs序解决。
+
+还有一个大坑，根据题意建好 Trie 之后，我们还需要把 Trie 备份一份，因为之后查询还需要用。
+
+```cpp
+#include <bits/stdc++.h>
+#define MAXN 1000005
+#define MAXM 27
+using namespace std;
+inline int read(){
+	int x=0,f=1;
+	char ch=getchar();
+	while (ch<'0'||ch>'9'){
+		if (ch=='-') f=-1;
+		ch=getchar();
+	}
+	while (ch>='0'&&ch<='9'){
+		x=x*10+(ch-'0');
+		ch=getchar();
+	}
+	return x*f;
+}
+char s[MAXN];
+int n,tot,ans[MAXN];
+namespace BIT{
+	#define lowbit(i) (i&(-i))
+	int C[MAXN];
+	void upd(int k,int delta){
+		for (int i=k;i<=tot+10;i+=lowbit(i)) C[i]+=delta;//可能有点小问题
+	}
+	int qry(int k){
+		int ans=0;
+		for (int i=k;i;i-=lowbit(i)) ans+=C[i];
+		return ans;
+	}
+}
+using namespace BIT;
+int temp[MAXN][MAXM];
+namespace AC_Automation{
+	int trie[MAXN][MAXM],fail[MAXN];
+	void BuildFail(){
+		queue<int>Q;
+		for (int i=0;i<26;++i){
+			if (trie[0][i]) Q.push(trie[0][i]);
+		}
+		while (Q.size()){
+			int now=Q.front();Q.pop();
+			for (int i=0;i<26;++i){
+				int &child=trie[now][i];
+				if (child){
+					fail[child]=trie[fail[now]][i];
+					Q.push(child);
+				}
+				else {
+					child=trie[fail[now]][i];
+				}
+			}
+		}
+	}
+	vector<pair<int,int> >Query[MAXN];
+	vector<int>G[MAXN];
+	void AddEdge(int u,int v){
+		G[u].push_back(v);
+	}
+	int L[MAXN],R[MAXN],dfn;
+	void dfs(int u){
+        //在 fail 树上标记 dfn
+		L[u]=++dfn;
+		for (int i=0;i<G[u].size();++i) dfs(G[u][i]);
+		R[u]=dfn;
+	}
+	void get_ans(int u){
+        //在 trie 上统计答案
+		upd(L[u],1);
+		for (int i=0;i<Query[u].size();++i){
+			int v=Query[u][i].first;
+			int id=Query[u][i].second;
+			ans[id]=qry(R[v])-qry(L[v]-1);
+		}
+		for (int i=0;i<26;++i){
+			int v=temp[u][i];
+			if (v) get_ans(v);
+		}
+		upd(L[u],-1);
+	}
+}
+using namespace AC_Automation;
+char opr[MAXN];
+int ed[MAXN],fa[MAXN];
+int main(){
+	scanf("%s",opr);
+	int len=strlen(opr),now=0;
+	for (int i=0;i<len;++i){
+		if (opr[i]=='P') ed[++n]=now;
+		else if (opr[i]=='B') now=fa[now];
+		else {
+			int c=opr[i]-'a';
+			int &child=trie[now][c];
+			if (!child) child=++tot;
+			fa[child]=now;
+			now=child;
+		}
+	}
+	for (int i=0;i<=tot;++i){
+		for (int j=0;j<26;++j){
+			temp[i][j]=trie[i][j];
+		}
+	}
+	BuildFail();
+	int q=read();
+	for (int i=1;i<=q;++i){
+		int x=read(),y=read();
+		Query[ed[y]].push_back(make_pair(ed[x],i));
+	}
+	for (int i=1;i<=tot;++i){
+		AddEdge(fail[i],i);
+	}
+	dfs(0);
+	get_ans(0);
+	for (int i=1;i<=q;++i){
+		printf("%d\n",ans[i]);
+	}
+}
 ```
 
