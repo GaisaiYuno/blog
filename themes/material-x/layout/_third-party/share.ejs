@@ -14,9 +14,9 @@
           <% if (item.id == 'qzone'){ %>
           href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<%- post.permalink %>&title=<%- post.title + ' | ' + config.title %><%- (post.img || config.avatar) ? '&pics=' + (post.img || config.avatar) : '' %>&summary=<%- strip_html(post.excerpt) %>"
           <% } else if (item.id == 'qq'){ %>
-          href="http://connect.qq.com/widget/shareqq/index.html?url=<%- post.permalink %>&title=<%- post.title + ' | ' + config.title %><%- (post.img || config.avatar) ? '&pics=' + (post.img || config.avatar) : '' %>&summary=<%- strip_html(post.excerpt) %>"
+          href="https://connect.qq.com/widget/shareqq/index.html?url=<%- post.permalink %>&title=<%- post.title + ' | ' + config.title %><%- (post.img || config.avatar) ? '&pics=' + (post.img || config.avatar) : '' %>&summary=<%- strip_html(post.excerpt) %>"
           <% } else if (item.id == 'weibo'){ %>
-          href="http://service.weibo.com/share/share.php?url=<%- post.permalink %>&title=<%- post.title + ' | ' + config.title %><%- (post.img || config.avatar) ? '&pics=' + (post.img || config.avatar) : '' %>&summary=<%- strip_html(post.excerpt) %>"
+          href="https://service.weibo.com/share/share.php?url=<%- post.permalink %>&title=<%- post.title + ' | ' + config.title %><%- (post.img || config.avatar) ? '&pics=' + (post.img || config.avatar) : '' %>&summary=<%- strip_html(post.excerpt) %>"
           <% } %>
           >
           <% if (item.img){ %>

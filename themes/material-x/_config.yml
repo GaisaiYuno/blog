@@ -13,7 +13,7 @@ info:
 ############################### 主题风格 ###############################
 # style: material    # material: 导航栏和标题栏背景是主题色
 style: pure        # pure: 导航栏和标题栏背景是白色
-url: http://stevenmhy.tk
+url: https://stevenmhy.tk
 
 search_engine:
   google_analytics_key: UA-150421519-2
@@ -60,7 +60,7 @@ music:
 
 # 友链页头像占位图因为使用pjax，被我阉割掉了
 
-# 日期格式 http://momentjs.com/docs/
+# 日期格式 hthttps://mentjs.com/docs/
 date_format: 'YYYY-MM-DD' # 文章发布日期的格式
 updated_date_format: 'll' # 文章更新日期的格式
 

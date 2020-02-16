@@ -54,7 +54,7 @@ function() {
     /*!
 	autosize 4.0.2
 	license: MIT
-	http://www.jacklmoore.com/autosize
+	https://www.jacklmoore.com/autosize
 */
     !
     function(n, a) {
@@ -289,7 +289,7 @@ function() {
         head: {
           nick: "NickName",
           mail: "E-Mail",
-          link: "Website(http://)"
+          link: "Website(https://)"
         },
         tips: {
           comments: "Comments",
@@ -1985,7 +1985,7 @@ function() {
             else if (e) throw new Error("Infinite loop on byte: " + e.charCodeAt(0))
           } else a[0] = this.rules._backpedal.exec(a[0])[0],
           e = e.substring(a[0].length),
-          "@" === a[2] ? (n = s(a[0]), i = "mailto:" + n) : (n = s(a[0]), i = "www." === a[1] ? "http://" + n: n),
+          "@" === a[2] ? (n = s(a[0]), i = "mailto:" + n) : (n = s(a[0]), i = "www." === a[1] ? "https://" + n: n),
           l += this.renderer.link(i, null, n);
           return l
         },
