@@ -16,11 +16,11 @@ tags:
 
 那么$i$子树的期望大小即是$\sum _{j!=i} p[i][j]$。
 
-如何计算$p[i][j]$，考虑$i$到$j$的路径上共$dis(i,j)+1$个点，只有$i$是第一个被选择的点时，$i$和$j$才不会被分开，于是$p[i][j]=\frac{1}{dis(i,j)+1}$。
+如何计算$p[i][j]$，考虑$i$到$j$的路径上共$dis(i,j)+1$个点，只有$i$是第一个被选择的点时，$i$和$j$才不会被分开，于是$p[i][j]=\frac{1}{dis(i,j)+1}$。\dfrac
 
-如何计算$\sum _{i=1}^n \sum _{j=1} ^n \frac{1}{dis(i,j)+1}$。
+如何计算$\sum _{i=1}^n \sum _{j=1} ^n \f\dfrac}{dis(i,j)+1}$。
 
-我们转换一下，假设等于$k$的$dis(i,j)$有$cnt[k]$个，答案即是$\sum cnt[k] \times \frac{1}{k+1}$
+我们转换一下，假设等于$k$的$dis(i,j)$有$cnt[k]$个，答案即是$\sum cnt[k] \times \frac{1}{k+\dfrac
 
 这个$cnt[k]$可以$FFT$+点分治去做。
 

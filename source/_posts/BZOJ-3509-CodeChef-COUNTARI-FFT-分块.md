@@ -64,11 +64,11 @@ $Query2$计算的是$i,j$在编号为$id$的块，而$k$在$i,j$左边的情况�
 
 剩下$FFT$非常好写，只要把$1\to lb-1$和$rb+1 \to n$ 的$A[i]$丢进$Left$和$Right$两个数组卷积即可。
 
-时间复杂度分析：假设块大小为$sz$，暴力时间复杂度$O(sz \times n)$，$FFT$时间复杂度为$O( \frac{n}{sz} \times \sqrt {n \log n})$。
+时间复杂度分析：假设块大小为$sz$，暴力时间复杂度$O(sz \times n)$，$FFT$时间复杂度为$O( \frac{n}{sz} \t\dfrac\sqrt {n \log n})$。
 
-于是总时间复杂度为$O(sz \times n + \frac{n}{sz} \times n\log n)$
+于是总时间复杂度为$O(sz \times n + \frac\dfracz} \times n\log n)$
 
-搞一下均值，$sz  + \frac{1}{sz} \times n\log n \le 2 \times \sqrt {n \log n}$
+搞一下均值，$sz  + \fr\dfrac{sz} \times n\log n \le 2 \times \sqrt {n \log n}$
 
 于是$sz=\sqrt{n \log n}$时最优。
 
