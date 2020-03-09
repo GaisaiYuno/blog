@@ -112,7 +112,7 @@ links:
       - OIER
     - name: 三级的蒟蒻的博客
       avatar: https://s2.ax1x.com/2019/07/22/eiffxI.png
-      url: https://blog.konnyaku.monster/
+      url: http://blog.moekonnyaku.com/
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
@@ -213,7 +213,7 @@ links:
       textColor: '#667086'
       tags:
       - 向阳生长
-      - 触碰流云.
+      - 触碰流云
 ---
 
 欢迎各位交换友链！
