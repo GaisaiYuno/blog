@@ -142,7 +142,7 @@
 			})();
 		}
 		function LoadValine() {
-			$.getScript("https://cdn.jsdelivr.net/gh/xaoxuu/cdn-valine@1.3.4/js/valine.min.js",function(){
+			$.getScript("https://unpkg.com/valine@1.3.10/dist/Valine.min.js",function(){
 				var GUEST_INFO = ['nick','mail','link'];
 				var guest_info = '<%= theme.valine.guest_info %>'.split(',').filter(function(item){
 					return GUEST_INFO.indexOf(item) > -1
@@ -172,14 +172,13 @@
 		document.addEventListener('pjax:send', function () {
 			$(".loading").css("display", "block");//加载转圈圈的css
 			ActiveBar();
+			LoadValine();
 		});
 		// PJAX 完成之后执行的函数，可以和上面的重载放在一起
 		document.addEventListener('pjax:complete', function () {
 			$(".loading").css("display", "none");
 			LoadHitoKoto();
-		<% if (theme.valine.enable != false) {%>
-			LoadValine();
-		<% } %>
+		
 		<% if (theme.widget_pack.enable != false) {%>
 			LoadWpac();
 		<% } %>
@@ -199,6 +198,10 @@
 			LoadBaiduAnalytics();
 		<% } %>
 			ActiveBar();
+		<% if (theme.valine.enable != false) {%>
+			LoadValine();
+			console.log("loaded!");
+		<% } %>
 		});
 	</script>
 
