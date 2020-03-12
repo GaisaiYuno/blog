@@ -20,7 +20,7 @@ jobs:
     - name: Setup Hexo env
       run: |
         # install dependencies
-        npm i -g hexo-cli# 安装hexo
+        npm i -g hexo-cli #安装hexo
         npm i
   
     - name: Deploy
