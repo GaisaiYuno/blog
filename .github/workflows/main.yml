@@ -35,8 +35,8 @@ jobs:
         
         
         git init
-        git config user.name 'GaisaiYuno' # 换成你自己的邮箱和名字
-        git config user.email 'steven_mhy@outlook.com'
+        git config user.name "GaisaiYuno"
+        git config user.email "steven_mhy@outlook.com"
         git add .
         git commit -m "Update Blog"
         git push --force --quiet "https://$GH_TOKEN@$GH_REF" master:master
