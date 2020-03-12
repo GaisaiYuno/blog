@@ -33,7 +33,7 @@ jobs:
         echo "generate ok"
         
         
-        
+        cd ./public
         git init
         git config user.name "GaisaiYuno"
         git config user.email "steven_mhy@outlook.com"
