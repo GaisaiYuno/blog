@@ -18,14 +18,10 @@ jobs:
     
     - name: Setup Hexo env
       env:
-        ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GH_REF: github.com/GaisaiYuno/gaisaiyuno.github.io
       run: |
-        # set up private key for deploy
-        mkdir -p ~/.ssh/
-        echo "$ACTION_DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa # 配置秘钥
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-        # set git infomation
+        git init
         git config --global user.name 'GaisaiYuno' # 换成你自己的邮箱和名字
         git config --global user.email 'steven_mhy@outlook.com'
         # install dependencies
@@ -36,10 +32,14 @@ jobs:
       run: |
         # publish
         hexo generate
+        
         cp -r ./temp/. ./public/
         cd ./public
         cd archives
         find ./ -type f -name '*.html'|xargs sed -i "s#<em>#_#g"
         find ./ -type f -name '*.html'|xargs sed -i "s#</em>#_#g"
         cd ..
-        hexo deploy # 执行部署程序
+        
+        git add .
+        git commit -m "Update blog content by Travis CI to Github"
+        git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
