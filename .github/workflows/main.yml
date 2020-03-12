@@ -25,8 +25,8 @@ jobs:
   
     - name: Deploy
       env:
-        - GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        - GT_REF: github.com/GaisaiYuno/gaisaiyuno.github.io
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GT_REF: github.com/GaisaiYuno/gaisaiyuno.github.io
       run: |
         # publish
         hexo generate
