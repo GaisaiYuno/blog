@@ -45,4 +45,4 @@ jobs:
         git config user.email 'steven_mhy@outlook.com'
         git add .
         git commit -m "Update Blog"
-        git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+        git push --force --quiet "https://$GH_TOKEN@$GH_REF" master:master
