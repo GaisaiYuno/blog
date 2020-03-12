@@ -35,8 +35,7 @@ jobs:
         cp -r ./temp/. ./public/
         cd ./public
         cd archives
-        find ./ -type f -name '*.html'|xargs sed -i "s#<em>#_#g"
-        find ./ -type f -name '*.html'|xargs sed -i "s#</em>#_#g"
+        
         cd ..
         echo "copy ok"
         
