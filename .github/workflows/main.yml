@@ -24,9 +24,9 @@ jobs:
         npm i
   
     - name: Deploy
-      env:
+      with:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        GT_REF: github.com/GaisaiYuno/gaisaiyuno.github.io
+        GH_REF: github.com/GaisaiYuno/gaisaiyuno.github.io
       run: |
         # publish
         hexo generate
