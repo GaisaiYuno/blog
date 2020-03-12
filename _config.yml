@@ -84,7 +84,7 @@ theme: material-x
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/GaisaiYuno/GaisaiYuno.github.io.git
+  repo: git@github.com:GaisaiYuno.github.io.git
   branch: master
  
  #hexo sitemap
