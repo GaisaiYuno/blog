@@ -42,7 +42,7 @@ jobs:
         
         echo "copy ok"
         
-        wget https://google.com
+        # wget https://google.com
         
         git init
         git config user.name "GaisaiYuno"
