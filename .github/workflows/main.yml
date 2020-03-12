@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest # 在最新版的Ubuntu系统下运行
     
     steps:
+    
     - name: Checkout # 将仓库内master分支的内容下载到工作目录
       uses: actions/checkout@v1 # 脚本来自 https://github.com/actions/checkout
       
@@ -29,9 +30,13 @@ jobs:
         npm i
   
     - name: Deploy
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GH_REF: github.com/GaisaiYuno/gaisaiyuno.github.io
       run: |
         # publish
         hexo generate
+        echo "generate ok"
         
         cp -r ./temp/. ./public/
         cd ./public
@@ -39,6 +44,7 @@ jobs:
         find ./ -type f -name '*.html'|xargs sed -i "s#<em>#_#g"
         find ./ -type f -name '*.html'|xargs sed -i "s#</em>#_#g"
         cd ..
+        echo "copy ok"
         
         git add .
         git commit -m "Update blog content by Travis CI to Github"
