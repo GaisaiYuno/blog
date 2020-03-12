@@ -32,13 +32,7 @@ jobs:
         hexo generate
         echo "generate ok"
         
-        cp -r ./temp/. ./public/
-        cd ./public
-        cd archives
-        find ./ -type f -name '*.html'|xargs sed -i "s#<em>#_#g"
-        find ./ -type f -name '*.html'|xargs sed -i "s#</em>#_#g"
-        cd ..
-        echo "copy ok"
+        
         
         git init
         git config user.name 'GaisaiYuno' # 换成你自己的邮箱和名字
