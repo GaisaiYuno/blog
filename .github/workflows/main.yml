@@ -3,9 +3,9 @@ name: Deploy Blog
 on: [push] # 当有新push时运行
 
 env:
-    global:
-        - GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        - GT_REF: github.com/GaisaiYuno/gaisaiyuno.github.io
+  global:
+      - GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - GT_REF: github.com/GaisaiYuno/gaisaiyuno.github.io
         
 jobs:
   build: # 一项叫做build的任务
