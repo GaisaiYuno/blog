@@ -111,7 +111,7 @@ links:
       tags:
       - OIER
     - name: 三级的蒟蒻的博客
-      avatar: https://s2.ax1x.com/2019/07/22/eiffxI.png
+      avatar: https://cdn.jsdelivr.net/gh/chihuo2104/cdn/image/blog-style/avatar.jpg
       url: http://blog.moekonnyaku.com/
       backgroundColor: '#fff'
       textColor: '#667086'
