@@ -86,9 +86,9 @@ links:
       textColor: '#667086'
       tags:
       
-    - name: zqr
-      avatar: https://cdn.v2ex.com/gravatar/f8dec7b93740652d1b690447ec6e2078
-      url: https://www.cnblogs.com/THE-NAMELESS-SPECTRE/
+    - name: THE-NAMELESS-SPECTRE
+      avatar: https://the-nameless-spectre.github.io/file/avatar.png
+      url: https://the-nameless-spectre.github.io/
       backgroundColor: '#fff'
       textColor: '#667086'
       tags:
