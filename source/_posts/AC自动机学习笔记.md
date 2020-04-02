@@ -32,17 +32,19 @@ AC 自动机是一个关于若干模式串的 DFA （确定有限状态自动机
 
 Trie 树是一种简单的 DFA ，其形态是一棵树，比如说，一棵仅接受字符串 aa, ab, bb 的 DFA 长成这样：
 
-![](https://i.loli.net/2020/02/14/tcwZVi8OkBSXYH3.jpg)
+![](https://i.loli.net/2020/04/02/EZQYa1AyTbWh28p.png)
 
-我们再来构造一个仅能接受任意多的连续 1 组成的 01 字符串的 DFA ；
+我们再来构造一个仅能接受任意多的连续 1 组成的 01 字符串的 DFA ：
+
+![](https://i.loli.net/2020/04/02/chnkZWMbAsjuNiR.png)
 
 我们再来构造一个仅能接受含有 3 的倍数个 1 的 01 字符串的 DFA ：
 
-![](https://i.loli.net/2020/02/14/5o4BwNitpZMObAW.jpg)
+![](https://i.loli.net/2020/04/02/yALPOKkumSrFEj8.png)
 
 我们再构造一个仅能接受以 1011 为结尾的 01 字符串的 DFA ：
 
-![](https://i.loli.net/2020/02/14/wfTPqs4Dntx9p6Q.jpg)
+![](https://i.loli.net/2020/04/02/XHjur7YonKC5T1l.png)
 
 注意，我们要能接受所有后缀为 1011 的字符串，那么我们失配的时候，我们就不用重新开始，假设我们现在输入的字符串为$s$，只有最后一位失配，那么可以找到这个字符串的最长真 border ，可以从位置为 $|border(s)|$ 的节点重新走起。
 
