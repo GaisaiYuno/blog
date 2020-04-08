@@ -150,7 +150,7 @@ latest_comments:
 # 侧边栏小部件，默认按下面给定的顺序全部显示，文章中还可以自定义显示一部分以及顺序
 sidebar:
   - widget: author
-    avatar: https://cdn.jsdelivr.net/gh/GaisaiYuno/imghost/20200124153036.PNG
+    avatar: https://cdn.jsdelivr.net/gh/GaisaiYuno/imghost/head.PNG
     social: true
   
   - widget: toc
