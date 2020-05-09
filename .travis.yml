@@ -29,13 +29,6 @@ script:
     - hexo g
 
 after_script:
-  - cp -r ./temp/. ./public/
-  - cd ./public
-  - cd archives
-  - find ./ -type f -name '*.html'|xargs sed -i "s#<em>#_#g"
-  - find ./ -type f -name '*.html'|xargs sed -i "s#</em>#_#g"
-  - cd ..
-  
   - git init
   - git config user.name "GaisaiYuno"
   - git config user.email "steven_mhy@outlook.com"
