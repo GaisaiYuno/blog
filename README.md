@@ -1,5 +1,7 @@
 # Hexo主题Material X改编版本
 
+![](https://api.travis-ci.com/GaisaiYuno/blog.svg?branch=master&status=created)
+
 Hexo主题[Material X](https://github.com/xaoxuu/hexo-theme-material-x)的改编版本，参照各网友的博客魔改而来，感谢所有模块的原作者。
 
 ## 预览图
